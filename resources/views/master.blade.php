@@ -34,31 +34,31 @@
     <link rel="script" defer="defer" href="{{asset('assets/index-Dvk-m9y7.js')}}">
     <link rel="script" defer="defer" href="{{asset('assets/vendor-DR5RWKqR.js')}}">
     <link rel="script" defer="defer" href="{{asset('assets/@wbk/logger-B2PJ36TD.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/@wbk/svg-Bfdm4PIA.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/embla-carousel-react-BzYB0_h2.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/date-fns-BtDWlEzX.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/@wbk/ui-CyHpM1kR.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/react-hook-form-4Is_Po-Y.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/@wbk/analytics-BQky3x7x.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/@wbk/hooks-DLzdNyzN.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/@wbk/auth-CKGQqgCY.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/@hy/experiences-DjqdbvJK.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/i18next-CIEwNdMy.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/i18next-http-backend-Dv63VUCH.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/i18next-browser-languagedetector-BlRDQQ4L.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/react-i18next-wEu7J75T.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/@wbk/contentful-13WVeXE2.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/react-hot-toast-BeOYc3BL.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/@contentful/rich-text-react-renderer-DDXKQ87Q.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/@contentful/rich-text-types-Ck9EBoAh.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/embla-carousel-autoplay-0OO14Ffu.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/react-helmet-DfrvNBiT.js')}}">
+{{--    <link rel="script" defer="defer" href="{{asset('assets/@wbk/svg-Bfdm4PIA.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/embla-carousel-react-BzYB0_h2.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/date-fns-BtDWlEzX.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/@wbk/ui-CyHpM1kR.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/react-hook-form-4Is_Po-Y.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/@wbk/analytics-BQky3x7x.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/@wbk/hooks-DLzdNyzN.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/@wbk/auth-CKGQqgCY.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/@hy/experiences-DjqdbvJK.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/i18next-CIEwNdMy.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/i18next-http-backend-Dv63VUCH.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/i18next-browser-languagedetector-BlRDQQ4L.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/react-i18next-wEu7J75T.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/@wbk/contentful-13WVeXE2.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/react-hot-toast-BeOYc3BL.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/@contentful/rich-text-react-renderer-DDXKQ87Q.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/@contentful/rich-text-types-Ck9EBoAh.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/embla-carousel-autoplay-0OO14Ffu.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/react-helmet-DfrvNBiT.js')}}">--}}
 {{--    <link rel="script" defer="defer" href="{{asset('assets/@wbk/ticketing-DrPp9T8X.js')}}">--}}
-    <link rel="script" defer="defer" href="{{asset('assets/framer-motion-CjpMPw5U.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/@wbk/queue-4u0RQ_Ck.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/@wbk/packages-idCpq8Dw.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/react-share-DTvmqVZ7.js')}}">
-    <link rel="script" defer="defer" href="{{asset('assets/markdown-to-jsx-CuotGn2z.js')}}">
+{{--    <link rel="script" defer="defer" href="{{asset('assets/framer-motion-CjpMPw5U.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/@wbk/queue-4u0RQ_Ck.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/@wbk/packages-idCpq8Dw.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/react-share-DTvmqVZ7.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/markdown-to-jsx-CuotGn2z.js')}}">--}}
     <link rel="stylesheet" defer="defer" href="{{asset('assets/@wbk/ui-DNC_QbDw.css')}}">
     <link rel="stylesheet" defer="defer" href="{{asset('assets/index-CTFtIb-a.css')}}">
 
