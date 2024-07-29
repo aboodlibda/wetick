@@ -721,7 +721,7 @@ will-change: transform; z-index: 50; --radix-popper-available-width: 414.3999938
                   $("#total-before-tax").text(total_before_tax);
                   $("#button-total").text(total_before_tax);
 
-                  addOrUpdatePair(`{{$ticket->name}}` , added_ticket_{{$key}});
+                  addOrUpdatePair(`{{$ticket->id}}` , added_ticket_{{$key}});
 
                   {{--console.log("name : " , `{{$ticket->name}}` , "count : " , added_ticket_{{$key}})--}}
 
@@ -764,7 +764,7 @@ will-change: transform; z-index: 50; --radix-popper-available-width: 414.3999938
                       $("#ticket-item-{{$key}}").remove();
                   }
 
-                  addOrUpdatePair(`{{$ticket->name}}` , added_ticket_{{$key}});
+                  addOrUpdatePair(`{{$ticket->id}}` , added_ticket_{{$key}});
                   {{--console.log("name : " , `{{$ticket->name}}` , "count : " , added_ticket_{{$key}})--}}
 
               })

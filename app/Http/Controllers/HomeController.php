@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -32,11 +33,30 @@ class HomeController extends Controller
     public function confirm_booking(Request $request)
     {
         sleep(3);
-        $data = $request->input('data');
-        // Process the array data
-        // For example, save it to the database or perform other operations
+        // Extract ticket data from the request
+        $ticketData = $request->input('data');
 
-        return response()->json(['message' => 'Array received successfully!', 'data' => $data]);
+        // Define or find the order to attach tickets
+        $orderId = 1; // Replace this with your actual logic to determine the order ID
+        $order = Order::findOrFail($orderId);
+
+        // Prepare data for syncing
+        $syncData = [];
+        foreach ($ticketData as $item) {
+            $ticketId = $item[0];
+            $count = $item[1];
+            $syncData[$ticketId] = ['count' => $count];
+        }
+
+        // Sync the tickets with the order using a custom pivot table field
+        $order->tickets()->sync($syncData);
+
+        return response()->json([
+            'message' => 'Tickets have been attached to the order successfully.',
+            'data' => $order->tickets
+        ]);
+
+//        return response()->json(['message' => 'Array received successfully!', 'data' => $syncData]);
     }
 
 }

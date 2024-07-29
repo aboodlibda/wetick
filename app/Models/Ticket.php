@@ -12,4 +12,11 @@ class Ticket extends Model
     {
         return $this->belongsTo(Event::class);
     }
+
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class)
+            ->withPivot('count') // Include the 'count' field from the pivot table
+            ->withTimestamps();
+    }
 }
