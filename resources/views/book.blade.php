@@ -5,15 +5,8 @@
 @endsection
 
 @section('links')
-
-{{--    <link rel="script" defer="defer" href="{{asset('assets/@seatsio/seatsio-react-CnhLVPDT.js')}}">--}}
-
-{{--    <script src="https://cdn-eu.seatsio.net/chart.js"></script>--}}
-{{--    <script src="https://cdn-eu.seatsio.net/static/ve   rsion/seatsio-ui-prod-00130-nvq/chart-renderer/js/chartRenderer.e62b679c.js"></script>--}}
-{{--    <link rel="script"   href="https://webook.com/assets/index-DlNI-4Fn.js">--}}
-{{--    <link rel="script"   href="https://webook.com/assets/BookingPageSkeleton-BGvz8kC6.js">--}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="script"  href="{{asset('assets/@wbk/ticketing-DrPp9T8X.js')}}">
-{{--<link rel="script" href="https://webook.com/assets/OtherItemsWrapper-TXJXXTj1.js">--}}
 <script src=" https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>
 
 
@@ -185,9 +178,9 @@
                                         </svg>
                                     </div>
                                 </button>
-                                <button id="next" disabled
+                                <button id="next" type="submit" disabled
                                     class="bg-primary hover:bg-primary-light active:bg-primary-dark ring-primary text-primary-contrast focus:ring-1 ring-offset-2 ring-offset-body relative inline-flex items-center justify-center overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md h-12 grow basis-1/2 flex-col gap-0"
-                                    ><p class="font-semibold">التالي</p></button>
+                                    ><p class="font-semibold" id="next_text">التالي</p></button>
                             </div>
                         </div>
                     </div>
@@ -728,6 +721,10 @@ will-change: transform; z-index: 50; --radix-popper-available-width: 414.3999938
                   $("#total-before-tax").text(total_before_tax);
                   $("#button-total").text(total_before_tax);
 
+                  addOrUpdatePair(`{{$ticket->name}}` , added_ticket_{{$key}});
+
+                  {{--console.log("name : " , `{{$ticket->name}}` , "count : " , added_ticket_{{$key}})--}}
+
 
               })
 
@@ -767,8 +764,11 @@ will-change: transform; z-index: 50; --radix-popper-available-width: 414.3999938
                       $("#ticket-item-{{$key}}").remove();
                   }
 
+                  addOrUpdatePair(`{{$ticket->name}}` , added_ticket_{{$key}});
+                  {{--console.log("name : " , `{{$ticket->name}}` , "count : " , added_ticket_{{$key}})--}}
 
               })
+
 
 
               @endforeach
@@ -778,6 +778,78 @@ will-change: transform; z-index: 50; --radix-popper-available-width: 414.3999938
 
       // ********************************** Mobile Ends Here ******************************************************
 
+      // ************************************* Insert & Delete From Array ********************************************
+      // Initialize the array
+      let uniqueArray = [];
 
+
+      // Function to update or add pair to the array
+      function addOrUpdatePair(name , count) {
+          const firstValue = name;
+          const secondValue = count;
+
+          // Check if the first value already exists
+          let found = false;
+          for (let i = 0; i < uniqueArray.length; i++) {
+              if (uniqueArray[i][0] === firstValue) {
+                  // Update the second value if the first value is found
+                  uniqueArray[i][1] = secondValue;
+                  found = true;
+                  break;
+              }
+          }
+
+          // If the first value does not exist, add a new pair
+          if (!found) {
+              uniqueArray.push([firstValue, secondValue]);
+          }
+
+          // Remove elements where the second value is 0
+          uniqueArray = uniqueArray.filter(pair => pair[1] !== 0);
+
+          // Display the updated array
+          displayArray();
+      }
+
+      // Function to display the array
+      function displayArray() {
+          console.log(JSON.stringify(uniqueArray, null, 2));
+      }
+
+
+
+      // **************************************** Send Array To Laravel Controller****************************************
+
+
+      // Function to send the array to Laravel
+      function sendToLaravel() {
+          fetch('{{route('confirm-booking')}}', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+                  'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+              },
+              body: JSON.stringify({ data: uniqueArray })
+          })
+
+              .then($('#next').attr('disabled',''))
+              .then($("#next_text").text('جار الحجز . . .'))
+              .then(response => response.json())
+              .then(data => {
+                  console.log('Success:', data.data);
+                  alert('Array sent successfully!');
+              })
+              .catch(error => {
+                  console.error('Error:', error);
+                  alert('Error sending array.');
+              });
+      }
+      const sendButton = document.getElementById('next');
+      sendButton.addEventListener('click', sendToLaravel);
   </script>
+
 @endsection
+
+
+
+

@@ -11,7 +11,7 @@ Route::get('/',[HomeController::class,'home'])->name('home');
 
 Route::get('main-event/{id}',[HomeController::class,'event'])->name('main-event');
 Route::get('book-event/{id}',[HomeController::class,'book'])->name('book-event');
-
+Route::post('confirm-booking',[HomeController::class,'confirm_booking'])->name('confirm-booking');
 
 
 

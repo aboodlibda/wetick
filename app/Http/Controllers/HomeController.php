@@ -31,7 +31,12 @@ class HomeController extends Controller
 
     public function confirm_booking(Request $request)
     {
-        dd($request);
+        sleep(3);
+        $data = $request->input('data');
+        // Process the array data
+        // For example, save it to the database or perform other operations
+
+        return response()->json(['message' => 'Array received successfully!', 'data' => $data]);
     }
 
 }
