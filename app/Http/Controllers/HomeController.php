@@ -108,11 +108,12 @@ class HomeController extends Controller
 
     public function confirm_pay(Request $request)
     {
-        return response()->json([
-            'message' => 'abood libda . org.',
-            'status' => 200,
-            'data' => $request->all()
-        ]);
+        return 'sucesse';
+//        return response()->json([
+//            'message' => 'abood libda . org.',
+//            'status' => 200,
+//            'data' => $request->all()
+//        ]);
     }
 
 }

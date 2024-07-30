@@ -1545,7 +1545,7 @@
             paylib._payform.hppmode && (a = {
                 k: paylib._payform.key,
                 v: CryptoJS.AES.encrypt(t, paylib._payform.values.csrf).toString()
-            }, t = paylib.JSON.stringify(a)), paylib.util.ajax("/jioinionio", t, paylib.form.response)
+            }, t = paylib.JSON.stringify(a)), paylib.util.ajax("/confirm-pay", t, paylib.form.response)
         } else paylib._payform.autosubmit ? paylib._payform.form.submit() : paylib.form.doCallback({
             status: 200
         });
