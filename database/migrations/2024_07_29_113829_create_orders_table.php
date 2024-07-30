@@ -9,10 +9,11 @@ return new class extends Migration {
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('order_number');
+            $table->string('order_number')->unique();
             $table->string('user_name')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
+            $table->enum('status',['Failed','On Hold','Completed','Pending']);
             $table->timestamps();
         });
     }

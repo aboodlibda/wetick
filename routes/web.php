@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\TicketsController;
+use Illuminate\Support\Facades\Session;
+
 
 Route::get('/',[HomeController::class,'home'])->name('home');
 
@@ -13,7 +15,21 @@ Route::get('main-event/{id}',[HomeController::class,'event'])->name('main-event'
 Route::get('book-event/{id}',[HomeController::class,'book'])->name('book-event');
 Route::post('confirm-booking',[HomeController::class,'confirm_booking'])->name('confirm-booking');
 
+Route::get('user_info',function (){
+    return view('user_info');
+})->name('user-info');
 
+
+Route::get('/payment/expired',function (){
+    return 'aboodlibda';
+});
+
+
+
+Route::get('pay',[HomeController::class,'pay'])->name('pay');
+Route::post('confirm-pay',[HomeController::class,'confirm_pay'])->name('confirm-pay');
+
+Route::post('create-order',[HomeController::class,'create_order'])->name('create-order');
 
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/register', [AuthController::class, 'register'])->name('register');

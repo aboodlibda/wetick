@@ -8,8 +8,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="script"  href="{{asset('assets/@wbk/ticketing-DrPp9T8X.js')}}">
 <script src=" https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>
-
-
 @endsection
 @section('content')
 
@@ -836,12 +834,13 @@ will-change: transform; z-index: 50; --radix-popper-available-width: 414.3999938
               .then($("#next_text").text('جار الحجز . . .'))
               .then(response => response.json())
               .then(data => {
-                  console.log('Success:', data.data);
-                  alert('Array sent successfully!');
+                  sessionStorage.setItem('order-tickets', JSON.stringify(data.data));
+
+                  // Redirect
+                  window.location.href = `{{route('user-info')}}`;
               })
               .catch(error => {
                   console.error('Error:', error);
-                  alert('Error sending array.');
               });
       }
       const sendButton = document.getElementById('next');

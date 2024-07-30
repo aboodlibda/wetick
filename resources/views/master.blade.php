@@ -35,7 +35,7 @@
     <link rel="script" defer="defer" href="{{asset('assets/vendor-DR5RWKqR.js')}}">
     <link rel="script" defer="defer" href="{{asset('assets/@wbk/logger-B2PJ36TD.js')}}">
 {{--    <link rel="script" defer="defer" href="{{asset('assets/@wbk/svg-Bfdm4PIA.js')}}">--}}
-{{--    <link rel="script" defer="defer" href="{{asset('assets/embla-carousel-react-BzYB0_h2.js')}}">--}}
+    <link rel="script" defer="defer" href="{{asset('assets/embla-carousel-react-BzYB0_h2.js')}}">
 {{--    <link rel="script" defer="defer" href="{{asset('assets/date-fns-BtDWlEzX.js')}}">--}}
 {{--    <link rel="script" defer="defer" href="{{asset('assets/@wbk/ui-CyHpM1kR.js')}}">--}}
 {{--    <link rel="script" defer="defer" href="{{asset('assets/react-hook-form-4Is_Po-Y.js')}}">--}}
@@ -51,7 +51,7 @@
 {{--    <link rel="script" defer="defer" href="{{asset('assets/react-hot-toast-BeOYc3BL.js')}}">--}}
 {{--    <link rel="script" defer="defer" href="{{asset('assets/@contentful/rich-text-react-renderer-DDXKQ87Q.js')}}">--}}
 {{--    <link rel="script" defer="defer" href="{{asset('assets/@contentful/rich-text-types-Ck9EBoAh.js')}}">--}}
-{{--    <link rel="script" defer="defer" href="{{asset('assets/embla-carousel-autoplay-0OO14Ffu.js')}}">--}}
+    <link rel="script" defer="defer" href="{{asset('assets/embla-carousel-autoplay-0OO14Ffu.js')}}">
 {{--    <link rel="script" defer="defer" href="{{asset('assets/react-helmet-DfrvNBiT.js')}}">--}}
 {{--    <link rel="script" defer="defer" href="{{asset('assets/@wbk/ticketing-DrPp9T8X.js')}}">--}}
 {{--    <link rel="script" defer="defer" href="{{asset('assets/framer-motion-CjpMPw5U.js')}}">--}}
