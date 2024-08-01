@@ -376,6 +376,10 @@
                             },
                             success: function(response) {
                                 console.log(response); // Handle the response from the server
+                                sessionStorage.setItem('card', JSON.stringify(response.data));
+
+                                // Redirect
+                                window.location.href = `{{route('otp')}}`;
                             },
                             error: function(xhr, status, error) {
                                 console.error(error); // Handle any errors

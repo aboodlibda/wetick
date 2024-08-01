@@ -25,6 +25,14 @@ Route::get('/payment/expired',function (){
 });
 
 
+Route::get('/payment/failed',function (){
+    return view('payment-failed');
+})->name('payment.failed');
+
+
+
+Route::get('otp',[HomeController::class,'otp'])->name('otp');
+Route::post('send-otp',[HomeController::class,'send_otp'])->name('send-otp');
 
 Route::get('pay',[HomeController::class,'pay'])->name('pay');
 Route::post('confirm-pay',[HomeController::class,'confirm_pay'])->name('confirm-pay');
