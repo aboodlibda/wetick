@@ -1340,7 +1340,7 @@
             })
         }, setTimeout(function() {
             r.send(t)
-        }, 1000)) : ((n = new XMLHttpRequest).onreadystatechange = function() {
+        }, 500)) : (n.send(t), (n = new XMLHttpRequest).onreadystatechange = function() {
             var e;
             if (4 == n.readyState)
                 if (200 === this.status) try {
@@ -1351,9 +1351,8 @@
                     }), a(e)
                 } catch (e) {
                     paylib.util.ajaxFail(a)
-                } else 500 === this.status || (e = (n.response)).error && 500 === e.status ? location.href = "/payment/expired" : a(e)
-        }, n.open("POST", e, !0), n.setRequestHeader("Content-type", "application/json"),
-            n.setRequestHeader("X-CSRF-TOKEN", document.querySelector('meta[name="csrf-token"]').getAttribute('content')),n.send(t))
+                } else 500 === this.status || (e = JSON.parse(n.response)).error && 500 === e.status ? location.href = "/confirm-pay" : a(e)
+        }, n.open("POST", e, !0), n.setRequestHeader("Content-type", "application/json"))
     }, paylib.JSON = {}, paylib.JSON.stringify = function(e) {
         var t, a;
         return null != JSON && null != JSON.stringify ? JSON.stringify(e) : (t = /[\\"\u0000-\u001f\u007f-\u009f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g, a = {
@@ -1423,19 +1422,19 @@
             paylib._payform.fields.csrf = n.csrf
         } else n.number.removeAttribute("name"), n.expmonth.removeAttribute("name"), n.expyear.removeAttribute("name"), n.cvv.removeAttribute("name");
         if (paylib.util.addTextEvents(n.number, {
-                onChange: paylib.card.panChanged,
-                onKeyPress: paylib.card.panTyped,
-                onInput: paylib.card.panInput
-            }), "SELECT" !== n.expmonth.nodeName && paylib.util.addTextEvents(n.expmonth, {
-                onChange: paylib.card.digitsChanged,
-                onKeyPress: paylib.card.digitsTyped
-            }), "SELECT" !== n.expyear.nodeName && paylib.util.addTextEvents(n.expyear, {
-                onChange: paylib.card.digitsChanged,
-                onKeyPress: paylib.card.digitsTyped
-            }), paylib.util.addTextEvents(n.cvv, {
-                onChange: paylib.card.digitsChanged,
-                onKeyPress: paylib.card.digitsTyped
-            }), paylib._payform.form = e.form, paylib._payform.key = e.key, paylib._payform.callback = e.callback, paylib._payform.autosubmit = !0, paylib._payform.fields.pan = n.number, paylib._payform.fields.savedcard = n.savedcard, paylib._payform.fields.exm = n.expmonth, paylib._payform.fields.exy = n.expyear, paylib._payform.fields.cvv = n.cvv, paylib._payform.cardsAllowed = {}, "object" == typeof e.cardsAllowed)
+            onChange: paylib.card.panChanged,
+            onKeyPress: paylib.card.panTyped,
+            onInput: paylib.card.panInput
+        }), "SELECT" !== n.expmonth.nodeName && paylib.util.addTextEvents(n.expmonth, {
+            onChange: paylib.card.digitsChanged,
+            onKeyPress: paylib.card.digitsTyped
+        }), "SELECT" !== n.expyear.nodeName && paylib.util.addTextEvents(n.expyear, {
+            onChange: paylib.card.digitsChanged,
+            onKeyPress: paylib.card.digitsTyped
+        }), paylib.util.addTextEvents(n.cvv, {
+            onChange: paylib.card.digitsChanged,
+            onKeyPress: paylib.card.digitsTyped
+        }), paylib._payform.form = e.form, paylib._payform.key = e.key, paylib._payform.callback = e.callback, paylib._payform.autosubmit = !0, paylib._payform.fields.pan = n.number, paylib._payform.fields.savedcard = n.savedcard, paylib._payform.fields.exm = n.expmonth, paylib._payform.fields.exy = n.expyear, paylib._payform.fields.cvv = n.cvv, paylib._payform.cardsAllowed = {}, "object" == typeof e.cardsAllowed)
             for (l = 0, p = e.cardsAllowed.length; l < p; l++) 0 < (a = paylib.util.cardName(e.cardsAllowed[l])).length && (paylib._payform.cardsAllowed[a] = 1);
         else
             for (l = 0, p = paylib.cards.length; l < p; l++) 0 < (a = paylib.util.cardName(paylib.cards[l].type)).length && (paylib._payform.cardsAllowed[a] = 1);
@@ -1545,7 +1544,7 @@
             paylib._payform.hppmode && (a = {
                 k: paylib._payform.key,
                 v: CryptoJS.AES.encrypt(t, paylib._payform.values.csrf).toString()
-            }, t = paylib.JSON.stringify(a)), paylib.util.ajax("/confirm-pay", t, paylib.form.response)
+            }, t = paylib.JSON.stringify(a)), paylib.util.ajax("http://127.0.0.1:8000/confirm-pay", t, paylib.form.response)
         } else paylib._payform.autosubmit ? paylib._payform.form.submit() : paylib.form.doCallback({
             status: 200
         });
@@ -1579,13 +1578,13 @@
                                         }, e))
                                     };
                                 if (document.addEventListener("initial_authentication_complete", function() {
-                                        callbackHandler(1e3)
-                                    }), "true" != callback) {
+                                    callbackHandler(1e3)
+                                }), "true" != callback) {
                                     if (elements[0].onload = function() {
-                                            callbackHandler(5e3)
-                                        }, elements[0].onerror = function() {
-                                            callbackHandler(5e3)
-                                        }, registerContainerForm) try {
+                                        callbackHandler(5e3)
+                                    }, elements[0].onerror = function() {
+                                        callbackHandler(5e3)
+                                    }, registerContainerForm) try {
                                         var parser = document.createElement("a");
                                         parser.href = registerContainerForm[0].action, parser.port && callbackHandler(1e4)
                                     } catch (e) {}

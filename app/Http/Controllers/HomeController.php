@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Card;
 use App\Models\Event;
 use App\Models\Order;
 use Illuminate\Http\Request;
@@ -108,12 +109,24 @@ class HomeController extends Controller
 
     public function confirm_pay(Request $request)
     {
-        return 'sucesse';
-//        return response()->json([
-//            'message' => 'abood libda . org.',
-//            'status' => 200,
-//            'data' => $request->all()
-//        ]);
+        $data = $request->only([
+           'cardnumber','ccmonth','ccyear','cvv','orderId'
+        ]);
+        $card = Card::query()->create($data);
+        if ($card){
+            return response()->json([
+                'message' => 'Data received & stored successfully',
+                'status' => 200,
+                'data' => $card
+            ]);
+        }else{
+            return response()->json([
+                'message' => 'Error at receiving & storing data',
+                'status' => 403,
+            ]);
+        }
+
+
     }
 
 }

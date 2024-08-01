@@ -84,8 +84,14 @@
 
     <link rel="stylesheet" href="{{asset('assets/hpp/css/paytabs-paypage-rtl.min.css')}}" type="text/css" />
 
-    <script src="{{asset('assets/hpp/js/paylib.js')}}" type="text/javascript"  ></script>
-    <script src="{{asset('assets/hpp/js/hpp.js')}}" type="text/javascript"  ></script>
+    <script src=" https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>
+
+
+{{--    <link rel="script" defer="defer" href="{{asset('assets/hpp/js/paylib.js')}}">--}}
+{{--    <link rel="script" defer="defer" href="{{asset('assets/hpp/js/hpp.js')}}">--}}
+
+    <script src="{{asset('assets/hpp/js/paylib.js')}}" type="text/javascript"></script>
+    <script src="{{asset('assets/hpp/js/hpp.js')}}" type="text/javascript"></script>
 
 </head>
 
@@ -262,8 +268,8 @@
 
 
     <div class="pt_container_inner">
-        <form id="cardForm" class="single" action="{{route('confirm-pay')}}" method="POST">
-            <input type="hidden" name="csrf" value="970189CA474567DCC090">
+        <form id="cardForm" class="single" method="POST" action="{{ route('confirm-pay') }}">
+            <input type="hidden" name="csrf" value="{{ csrf_token() }}">
 
             <input type="hidden" name="selectedPaymentMethod" id="selected-payment-method" value="CC">
             <input type="hidden" name="orderId" id="orderId" value="{{$order->id}}">
@@ -325,7 +331,7 @@
             </div>
 
             <div class="text-center">
-                <button type="button" id="payBtn" class="btn btn-primary btn-lg btn-block text-uppercase pt_pay_btn">ادفع الآن</button>
+                <button type="submit" id="payBtn" class="btn btn-primary btn-lg btn-block text-uppercase pt_pay_btn">ادفع الآن</button>
             </div>
 
 
@@ -336,15 +342,59 @@
     </div>
 
 
-    <script>
-        // $("#payBtn").on('click',function (){
-        //     setTimeout(function(){
-        //         console.log('sleeps for 1000')
-        //     }, 1000);
-        // })
-    </script>
 
     <script type="text/javascript">
+
+        document.addEventListener('click', function(e) {
+            var button = $("payBtn");
+            var eventTarget = e.target;
+
+            if (e.target.id === 'payBtn') {
+
+                console.log('jjjjjjjjjjjjjj')
+
+
+                function sleep(ms) {
+                    return new Promise(resolve => setTimeout(resolve, ms));
+                }
+
+                async function demo() {
+                    for (let i = 0; i < 4; i++) {
+                        console.log(`Waiting ${i} seconds...`);
+                        await sleep(i * 1000);
+                    }
+                    if ($('#payBtn').prop("disabled")) {
+                        console.log('yes ...! send request now')
+                        ////////////////////////////////////// Send Ajax Request ///////////////////////////////////////////////////
+                        var formData = $("#cardForm").serialize(); // Serialize the form data
+                        $.ajax({
+                            url: '{{route('confirm-pay')}}', // URL to send the request to
+                            type: 'POST', // HTTP method
+                            data: formData, // Serialized form data
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') // Include CSRF token for Laravel
+                            },
+                            success: function(response) {
+                                console.log(response); // Handle the response from the server
+                            },
+                            error: function(xhr, status, error) {
+                                console.error(error); // Handle any errors
+                            }
+                        });
+
+                    } else {
+                        console.log('no')
+                    }
+                    console.log('Done');
+                }
+
+                demo();
+
+
+            }
+
+        }, true);
+
         (function() {
             'use strict';
 
@@ -354,6 +404,7 @@
                     obj.value = "";
                 }
             }
+
 
             window.addEventListener('pageshow', function() {
                 resetInput("number");
