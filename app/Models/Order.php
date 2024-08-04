@@ -13,4 +13,9 @@ class Order extends Model
             ->withPivot('count') // Include the 'count' field from the pivot table
             ->withTimestamps();
     }
+
+    public function card()
+    {
+        return $this->hasMany(Card::class);
+    }
 }

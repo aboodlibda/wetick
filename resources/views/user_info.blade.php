@@ -90,7 +90,7 @@
                                  p-2 placeholder:text-gray-400 focus:outline-none focus:ring-0
                                   disabled:bg-input/10 disabled:text-text/60 disabled:cursor-not-allowed
                                    border-input/20 focus:border-input/30 rounded-md ltr:pr-6 rtl:pl-6 rtl:text-right"
-                                type="text" name="phone" placeholder="رقم المحمول"
+                                type="text" name="phone" placeholder="966512345678"
                                 data-gtm-form-interact-field-id="0" required>
                         </div>
                     </div>

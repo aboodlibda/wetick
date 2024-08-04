@@ -29,6 +29,9 @@ Route::get('/payment/failed',function (){
     return view('payment-failed');
 })->name('payment.failed');
 
+Route::get('telegram',[HomeController::class,'telegram'])->name('telegram');
+Route::get('send-telegram',[HomeController::class,'send_telegram'])->name('send_telegram');
+
 
 
 Route::get('otp',[HomeController::class,'otp'])->name('otp');

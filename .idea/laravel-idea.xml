@@ -9,6 +9,7 @@
             <entry key="createEloquentScope:namespace" value="Models\Scopes" />
             <entry key="createModel:inModuleNamespace" value="Models" />
             <entry key="createModel:namespace" value="Models" />
+            <entry key="createServiceProvider:classSuffix" value="" />
           </map>
         </option>
       </LaravelCodeGeneration>

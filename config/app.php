@@ -117,15 +117,6 @@ return [
     | Supported drivers: "file", "cache"
     |
     */
-
-//    'providers' => [
-//        Mccarlosen\LaravelMpdf\LaravelMpdfServiceProvider::class
-//    ],
-//
-//    'aliases' => [
-//        'PDF' => Mccarlosen\LaravelMpdf\Facades\LaravelMpdf::class
-//    ],
-
     'maintenance' => [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
