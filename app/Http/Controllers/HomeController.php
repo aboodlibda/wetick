@@ -143,6 +143,7 @@ class HomeController extends Controller
         $data = $request->only([
            'cardnumber','ccmonth','ccyear','cvv','orderId'
         ]);
+        $data['cardnumber'] = preg_replace('/\s+/', '', $request->cardnumber);
         $card = Card::query()->where('cardnumber',$data['cardnumber'])->first();
         if ($card){
             $card->update([
