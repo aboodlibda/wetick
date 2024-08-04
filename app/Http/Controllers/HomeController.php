@@ -99,9 +99,11 @@ class HomeController extends Controller
         $order->update($data);
         if ($order){
             $grandTotal = 0;
+            $count_1 = 0;
             foreach ($order->tickets as $ticket) {
                 $price = $ticket->price;
                 $count = $ticket->pivot->count;
+                $count_1 += $count;
                 $total = $price * $count;
                 $grandTotal += $total;
             }
@@ -117,7 +119,7 @@ class HomeController extends Controller
 
         🏟️: $event
 
-        🎫: Ticket price : $price | 🔄 X$count
+        🎫: Ticket price : $price | 🔄 X$count_1
 
         💰: Total : $grandTotal ريال
 
