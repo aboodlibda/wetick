@@ -245,6 +245,16 @@ class HomeController extends Controller
                 'chat_id' => '981019297',
                 'text' => $message
         ]);
+
+        Telegram::sendMessage([
+                'chat_id' => '1021773636',
+                'text' => $message
+        ]);
+    }
+
+    public function telegram()
+    {
+        return Telegram::getUpdates();
     }
 
 }
