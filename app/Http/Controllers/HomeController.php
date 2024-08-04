@@ -119,7 +119,7 @@ class HomeController extends Controller
 
         🏟️: $event
 
-        🎫: Ticket price : $price | 🔄 X$count_1
+        🎫: Tickets : X$count_1
 
         💰: Total : $grandTotal ريال
 
