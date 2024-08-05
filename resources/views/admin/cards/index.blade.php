@@ -77,7 +77,7 @@
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <div class="d-flex justify-content-start flex-column">
-                                                    <span class="text-dark fw-bolder  mb-1 fs-6">{{$card->ccnumber}}</span>
+                                                    <span class="text-dark fw-bolder  mb-1 fs-6">{{$card->cardnumber}}</span>
                                                 </div>
                                             </div>
                                         </td>
@@ -92,7 +92,7 @@
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <div class="d-flex justify-content-start flex-column">
-                                                    <span class="text-white fw-bolder  mb-1 fs-6 badge badge-danger">{{$card->ccv}}</span>
+                                                    <span class="text-white fw-bolder  mb-1 fs-6 badge badge-danger">{{$card->cvv}}</span>
                                                 </div>
                                             </div>
                                         </td>
