@@ -73,6 +73,11 @@
                     <div id="booking-section-ref">
                         <div class="2lg:!h-auto overflow-y-auto 2lg:rounded-lg 2lg:bg-body-light">
                             <div class="bg-body-light h-full space-y-2 p-4 lg:space-y-4 lg:rounded-lg">
+                                @if($event->tickets->count() == 0)
+                                    <div>
+                                        <h2 class="text-base lg:text-lg">لم يتم طرح التذاكر بعد</h2>
+                                    </div>
+                                @else
                                 <div><h2 class="text-base lg:text-lg">1.اختر التذاكر</h2>
                                     <p class="text-xs">شامل ضريبة القيمة المضافة</p></div>
 
@@ -148,6 +153,8 @@
                                         </li>
                                     </ul>
                                 @endforeach
+
+                                @endif
 
                             </div>
                         </div>
