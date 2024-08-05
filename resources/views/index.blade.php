@@ -11,23 +11,23 @@
             السعودية</h1>
         <form class="relative z-20 mx-auto hidden w-full max-w-xl overflow-hidden p-1 md:block" type="button"
               aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r1:" data-state="closed"><img
-                src="https://webook.com/icons/common/search.svg"
+                src="{{asset('/icons/common/search.svg')}}"
                 class="absolute top-1/2 -translate-y-1/2 transform opacity-60 ltr:left-3 rtl:right-3" width="20"
                 height="20" alt=""><input type="search" inputmode="search"
                                           class="focus:ring-primary focus:border-primary bg-input/10 h-12 w-full rounded-md border-none border-transparent text-sm ltr:pl-8 rtl:pr-8"
                                           placeholder="ابحث عن الفعاليات والتجارب والمطاعم والفنانين" value=""><button type="submit"
                                                                                                                        aria-label="Search"
                                                                                                                        class="bg-primary absolute top-1/2 flex h-9 w-9 -translate-y-1/2 items-start justify-center rounded-md ltr:right-3 rtl:left-3"><img
-                    class="h-full" src="https://webook.com/icons/common/search.svg" width="18" height="18" alt="Search"></button>
+                    class="h-full" src="{{asset('/icons/common/search.svg')}}" width="18" height="18" alt="Search"></button>
         </form>
     </section>
     <section>
-        <video autoplay="" loop="" playsinline="" disablepictureinpicture=""
-               class="pointer-events-none absolute inset-0 z-[-1] h-full w-full select-none object-cover opacity-50">
-            <source
-                src="assets/Gold_Burst_03-1.m4v"
-                type="video/mp4">
-        </video>
+{{--        <video autoplay="" loop="" playsinline="" disablepictureinpicture=""--}}
+{{--               class="pointer-events-none absolute inset-0 z-[-1] h-full w-full select-none object-cover opacity-50">--}}
+{{--            <source--}}
+{{--                src="assets/Gold_Burst_03-1.m4v"--}}
+{{--                type="video/mp4">--}}
+{{--        </video>--}}
         <div class="embla">
             <div class="embla__viewport py-8">
                 <div class="embla__container" style="transform: translate3d(2432px, 0px, 0px);">
@@ -314,148 +314,7 @@
         class="relative z-20 mx-auto flex min-h-[122px] max-w-full items-center justify-center overflow-hidden py-4 [&amp;>div]:mx-auto">
         <div id="home/lb"></div>
     </div>
-    <section class="container relative space-y-8 overflow-hidden py-12">
-        <h2 class="text-2xl">استكشف مناطق موسم جدة</h2>
-        <div class="embla">
-            <div class="embla__viewport">
-                <div class="embla__container" style="transform: translate3d(0px, 0px, 0px);"><a
-                        class="embla__slide group relative mr-2 flex h-60 shrink-0 basis-2/5 items-center justify-center overflow-hidden rounded-xl sm:basis-1/4 md:basis-1/5 xl:basis-1/6"
-                        href="/ar/zones/city-walk-tickets-748638?utm_source=r2-1&amp;utm_medium=Jeddah_season_zones&amp;utm_campaign=CityWalk  Zone Page"><img
-                            src="https://images.ctfassets.net/vy53kjqs34an/18pK4vd5kqqigTT9rGf2mK/510d6082439d92a1a7ec2b66f13afff3/city_walk.jpeg?h=320&amp;fm=webp&amp;fit=thumb"
-                            sizes="600px"
-                            class="absolute -z-10 h-full w-full object-cover opacity-20 transition duration-500 group-hover:scale-[1.02] group-hover:opacity-40"
-                            width="800" height="800" alt="ستي ووك: كل ركن يحمل مفاجأة جديدة!" data-loaded="true"
-                            srcset="">
-                        <div class="relative z-10 "><img
-                                src="https://images.ctfassets.net/vy53kjqs34an/6GLSwtfPfF9shVJjm78eR5/42c3ffe8f9d24c7faac63a265e16cd3b/CITY_WALK.png?fm=webp&amp;fit=pad&amp;w=250&amp;h=250"
-                                width="250" height="250" class="mx-auto max-w-24 shrink-0"
-                                alt="ستي ووك: كل ركن يحمل مفاجأة جديدة!"></div>
-                    </a><a
-                        class="embla__slide group relative mr-2 flex h-60 shrink-0 basis-2/5 items-center justify-center overflow-hidden rounded-xl sm:basis-1/4 md:basis-1/5 xl:basis-1/6"
-                        href="/ar/zones/imagine-monet-tickets-873746?utm_source=r2-2&amp;utm_medium=Jeddah_season_zones&amp;utm_campaign=IMAGINE MONET  Zone Page"><img
-                            src="https://images.ctfassets.net/vy53kjqs34an/1591VUfbZgesw6utuduWzK/1c2e2e491e71de5b805f328ad2244af2/1920x1280_WeBook-App_Web.jpg?h=320&amp;fm=webp&amp;fit=thumb"
-                            sizes="600px"
-                            class="absolute -z-10 h-full w-full object-cover opacity-20 transition duration-500 group-hover:scale-[1.02] group-hover:opacity-40"
-                            width="800" height="800" alt="تخيل مونيه" data-loaded="true" srcset="">
-                        <div class="relative z-10 "><img
-                                src="https://images.ctfassets.net/vy53kjqs34an/Ub7ceZEclboyX5VqNNJQV/1775f6d25be6eacd74929432990c37e0/IMAGINE_MONET.png?fm=webp&amp;fit=pad&amp;w=250&amp;h=250"
-                                width="250" height="250" class="mx-auto max-w-24 shrink-0" alt="تخيل مونيه">
-                        </div>
-                    </a><a
-                        class="embla__slide group relative mr-2 flex h-60 shrink-0 basis-2/5 items-center justify-center overflow-hidden rounded-xl sm:basis-1/4 md:basis-1/5 xl:basis-1/6"
-                        href="/ar/zones/celebrate-with-warner-brothers-tickets?utm_source=r2-3&amp;utm_medium=Jeddah_season_zones&amp;utm_campaign=WARNER BROS Zone Page"><img
-                            src="https://images.ctfassets.net/vy53kjqs34an/1n3Qxs3a0YJNqrAjazTuc5/b0dd143d397bd614283253806908e9aa/zone-cover.jpg?h=320&amp;fm=webp&amp;fit=thumb"
-                            sizes="600px"
-                            class="absolute -z-10 h-full w-full object-cover opacity-20 transition duration-500 group-hover:scale-[1.02] group-hover:opacity-40"
-                            width="800" height="800" alt="Warner Bros" data-loaded="true" srcset="">
-                        <div class="relative z-10 "><img
-                                src="https://images.ctfassets.net/vy53kjqs34an/42jjQrNrK4PLQm3ZV0GHok/0088a563654992df0d49aacb828d9d11/WARNER_BROS.png?fm=webp&amp;fit=pad&amp;w=250&amp;h=250"
-                                width="250" height="250" class="mx-auto max-w-24 shrink-0" alt="Warner Bros">
-                        </div>
-                    </a><a
-                        class="embla__slide group relative mr-2 flex h-60 shrink-0 basis-2/5 items-center justify-center overflow-hidden rounded-xl sm:basis-1/4 md:basis-1/5 xl:basis-1/6"
-                        href="/ar/zones/prince-majid-park-1?utm_source=r2-4&amp;utm_medium=Jeddah_season_zones&amp;utm_campaign=Prince Majid Park Zone Page"><img
-                            src="https://images.ctfassets.net/vy53kjqs34an/54MTbJwud1I8D2nEHJz08Y/fd5afec070f129ff0102cfcfab4905a0/prince-majid-1920x1280.jpg?h=320&amp;fm=webp&amp;fit=thumb"
-                            sizes="600px"
-                            class="absolute -z-10 h-full w-full object-cover opacity-20 transition duration-500 group-hover:scale-[1.02] group-hover:opacity-40"
-                            width="800" height="800" alt="حديقة الأمير ماجد" data-loaded="true" srcset="">
-                        <div class="relative z-10 "><img
-                                src="https://images.ctfassets.net/vy53kjqs34an/EHiFfASQwhqI9A9JedeD2/2e229b0f59e9b35e724b1ff3dd2bed02/prince_majid_zone_logo.png?fm=webp&amp;fit=pad&amp;w=250&amp;h=250"
-                                width="250" height="250" class="mx-auto max-w-24 shrink-0"
-                                alt="حديقة الأمير ماجد"></div>
-                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-[11px] text-yellow-500">
-                            ينتهي في 2 أغسطس</div>
-                    </a></div>
-            </div>
-            <div
-                class="absolute left-1/2 top-1/2 w-full max-w-screen-2xl -translate-x-1/2 ltr:[&amp;>button:first-of-type]:left-0 rtl:[&amp;>button:first-of-type]:right-0 ltr:[&amp;>button:last-of-type]:right-0 rtl:[&amp;>button:last-of-type]:left-0">
-                <button
-                    class="embla__button embla__button--prev border-body bg-body-light ring-primary ring-offset-body hover:bg-body-lighter rounded-full border-2 focus:outline-none focus:ring-2"
-                    type="button" disabled="" aria-label="Previous"><svg width="32" height="32"
-                                                                         viewBox="0 0 32 32" fill="none" class="embla__button__svg fill-text rtl:rotate-180">
-                        <path
-                            d="M20.9426 8.94263C21.4633 8.42194 21.4633 7.57772 20.9426 7.05703C20.4219 6.53633 19.5777 6.53633 19.057 7.05703L11.057 15.057C10.5523 15.5618 10.5346 16.3745 11.017 16.9007L18.3503 24.9007C18.8478 25.4435 19.6913 25.4802 20.2341 24.9826C20.7769 24.485 20.8136 23.6416 20.316 23.0988L13.8453 16.0399L20.9426 8.94263Z">
-                        </path>
-                    </svg></button><button
-                    class="embla__button embla__button--next border-body bg-body-light ring-primary ring-offset-body hover:bg-body-lighter rounded-full border-2 focus:outline-none focus:ring-2"
-                    type="button" disabled="" aria-label="Next"><svg width="32" height="32" viewBox="0 0 32 32"
-                                                                     fill="none" class="embla__button__svg fill-text rotate-180 rtl:rotate-0">
-                        <path
-                            d="M20.9426 8.94263C21.4633 8.42194 21.4633 7.57772 20.9426 7.05703C20.4219 6.53633 19.5777 6.53633 19.057 7.05703L11.057 15.057C10.5523 15.5618 10.5346 16.3745 11.017 16.9007L18.3503 24.9007C18.8478 25.4435 19.6913 25.4802 20.2341 24.9826C20.7769 24.485 20.8136 23.6416 20.316 23.0988L13.8453 16.0399L20.9426 8.94263Z">
-                        </path>
-                    </svg></button></div>
-        </div>
-    </section>
-    <section class="container space-y-8 py-12">
-        <h2 class="text-2xl font-semibold text-gray-100">تابعونا</h2>
-        <div class="embla">
-            <div class="embla__viewport">
-                <div class="embla__container" style="transform: translate3d(0px, 0px, 0px);">
-                    <div class="embla__slide flex max-w-sm shrink-0 basis-[80%] px-2 md:basis-1/2 xl:basis-1/4">
-                        <div class="relative w-full overflow-hidden rounded-lg p-3">
-                            <div class="relative z-[1] mb-3 flex w-full items-start gap-4">
-                                <p class="grow text-sm font-semibold text-black">تابعوا ويبوك على اكس ليصلكم كل
-                                    جديد!</p><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/5GjLZ1LXDtYN0f5k2AR3Lv/d166c03a1bf9bb816dd1fb240a8c6b7a/twitter.png?w=40&amp;h=40"
-                                    width="40" height="40" alt="تابعوا ويبوك على اكس ليصلكم كل جديد!"
-                                    class="shrink-0 object-contain">
-                            </div><a
-                                class="bg-black hover:bg-[#0e0e0e] active:bg-black ring-black text-white focus:ring-1 ring-offset-2 inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md ring-offset-body-white relative z-[1] w-full"
-                                href="https://x.com/webook" target="_blank"> تابعنا الآن!</a><img
-                                src="https://images.ctfassets.net/vy53kjqs34an/7Ev2MaKdm1FhgZr2MWDjpB/971d8eefd96833e12a15e7e751d2a020/Follow_on_X.png?fm=webp"
-                                alt="" class="absolute inset-0 w-full object-cover">
-                        </div>
-                    </div>
-                    <div class="embla__slide flex max-w-sm shrink-0 basis-[80%] px-2 md:basis-1/2 xl:basis-1/4">
-                        <div class="relative w-full overflow-hidden rounded-lg p-3">
-                            <div class="relative z-[1] mb-3 flex w-full items-start gap-4">
-                                <p class="grow text-sm font-semibold text-black">تابعوا ويبوك على انستقرام
-                                    ليصلكم كل جديد!</p><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/1n0pNUr3EtLOiYPwnVoxPf/34c27b57e3f2063ef6aafdcfab1e25ed/Instagram_icon.png?w=40&amp;h=40"
-                                    width="40" height="40" alt="تابعوا ويبوك على انستقرام ليصلكم كل جديد!"
-                                    class="shrink-0 object-contain">
-                            </div><a
-                                class="bg-black hover:bg-[#0e0e0e] active:bg-black ring-black text-white focus:ring-1 ring-offset-2 inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md ring-offset-body-white relative z-[1] w-full"
-                                href="https://instagram.com/webookfun" target="_blank"> تابعنا الآن!</a><img
-                                src="https://images.ctfassets.net/vy53kjqs34an/7Ev2MaKdm1FhgZr2MWDjpB/971d8eefd96833e12a15e7e751d2a020/Follow_on_X.png?fm=webp"
-                                alt="" class="absolute inset-0 w-full object-cover">
-                        </div>
-                    </div>
-                    <div class="embla__slide flex max-w-sm shrink-0 basis-[80%] px-2 md:basis-1/2 xl:basis-1/4">
-                        <div class="relative w-full overflow-hidden rounded-lg p-3">
-                            <div class="relative z-[1] mb-3 flex w-full items-start gap-4">
-                                <p class="grow text-sm font-semibold text-black">تابعوا ويبوك على تيك توك ليصلكم
-                                    كل جديد!</p><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/24Hzd8rJ0gUazDFSIfa9n0/64a5a68a2c2b12570cdcb3b6d6cfa269/tiktok-icon.png?w=40&amp;h=40"
-                                    width="40" height="40" alt="تابعوا ويبوك على تيك توك ليصلكم كل جديد!"
-                                    class="shrink-0 object-contain">
-                            </div><a
-                                class="bg-black hover:bg-[#0e0e0e] active:bg-black ring-black text-white focus:ring-1 ring-offset-2 inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md ring-offset-body-white relative z-[1] w-full"
-                                href="https://www.tiktok.com/@webook.com" target="_blank"> تابعنا الآن!</a><img
-                                src="https://images.ctfassets.net/vy53kjqs34an/7Ev2MaKdm1FhgZr2MWDjpB/971d8eefd96833e12a15e7e751d2a020/Follow_on_X.png?fm=webp"
-                                alt="" class="absolute inset-0 w-full object-cover">
-                        </div>
-                    </div>
-                    <div class="embla__slide flex max-w-sm shrink-0 basis-[80%] px-2 md:basis-1/2 xl:basis-1/4">
-                        <div class="relative w-full overflow-hidden rounded-lg p-3">
-                            <div class="relative z-[1] mb-3 flex w-full items-start gap-4">
-                                <p class="grow text-sm font-semibold text-black">تابعوا ويبوك على يوتيوب ليصلكم
-                                    كل جديد!</p><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/5J2bFef3dZmvMVQECq4n24/71136a8cfadfb0320b5ff0f28a9eb841/youtube.png?w=40&amp;h=40"
-                                    width="40" height="40" alt="تابعوا ويبوك على يوتيوب ليصلكم كل جديد!"
-                                    class="shrink-0 object-contain">
-                            </div><a
-                                class="bg-black hover:bg-[#0e0e0e] active:bg-black ring-black text-white focus:ring-1 ring-offset-2 inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md ring-offset-body-white relative z-[1] w-full"
-                                href="https://www.youtube.com/channel/UCicg1LL4uwg1FPq-m9kZwVg" target="_blank">
-                                تابعنا الآن!</a><img
-                                src="https://images.ctfassets.net/vy53kjqs34an/7Ev2MaKdm1FhgZr2MWDjpB/971d8eefd96833e12a15e7e751d2a020/Follow_on_X.png?fm=webp"
-                                alt="" class="absolute inset-0 w-full object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <section class="container space-y-8 py-12">
         <h2 class="text-2xl font-semibold text-gray-100">استكشف حسب الفئة</h2>
         <div class="embla">
@@ -465,7 +324,7 @@
                         class="embla__slide flex max-w-sm shrink-0 basis-[80%] px-2 md:basis-1/2 lg:basis-1/3 xl:basis-1/5">
                         <a class="group relative flex h-36 w-full items-center overflow-hidden rounded-[14px] border-2 border-[var(--color)] text-[var(--color)]"
                            aria-label="الفعاليات" style="--color: #5c3cc5; --highlight: #5c3cc530;"
-                           href="/ar/explore?type=events&amp;utm_source=r3-1&amp;utm_medium=Categories&amp;utm_campaign=Explore Events"><span
+                           href=""><span
                                 class="absolute top-0 ltr:left-0 rtl:right-0 rtl:-scale-x-100"><svg width="60"
                                                                                                     height="51" viewBox="0 0 60 51" fill="none"
                                                                                                     xmlns="http://www.w3.org/2000/svg"
@@ -638,10 +497,10 @@
             </div>
             <div class="flex gap-2"><button
                     class="hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 focus:ring-1 ring-offset-body relative gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-white/30 p-0"
-                    aria-label="Previous"> <img src="/icons/common/arrow.svg" class="ltr:rotate-180" alt=""
+                    aria-label="Previous"> <img src="{{asset('/icons/common/arrow.svg')}}" class="ltr:rotate-180" alt=""
                                                 width="24" height="24"></button><button
                     class="hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 focus:ring-1 ring-offset-body relative gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-white/30 p-0"
-                    aria-label="Next"> <img src="/icons/common/arrow.svg" class="rtl:rotate-180" alt=""
+                    aria-label="Next"> <img src="{{asset('/icons/common/arrow.svg')}}" class="rtl:rotate-180" alt=""
                                             width="24" height="24"></button></div>
         </div>
         <div class="embla">
@@ -649,7 +508,7 @@
                 <div class="embla__container" style="transform: translate3d(0px, 0px, 0px);">
 
                     @php
-                        $events = \App\Models\Event::query()->where('status','=','active') ->latest()->paginate(10);
+                        $events = \App\Models\Event::query()->where('status','=','active')->latest()->paginate(10);
                     @endphp
                     @foreach($events as $event)
                         <div
@@ -696,175 +555,7 @@
         </div>
         <div class="flex items-center justify-center gap-4"></div>
     </section>
-    <section class="container space-y-8 py-12">
-        <h2>احجز المباريات القادمة</h2>
-        <div class="embla">
-            <div class="embla__viewport">
-                <div class="embla__container" style="transform: translate3d(0px, 0px, 0px);">
-                    <div class="embla__slide flex max-w-xs shrink-0 basis-[75%] px-2 md:basis-1/2 xl:basis-1/4">
-                        <a rel=""
-                           class="border-body-light relative flex h-40 w-full items-center justify-center overflow-hidden rounded-xl border bg-[linear-gradient(0deg,transparent,var(--color))] p-4 hover:bg-[linear-gradient(0deg,transparent,var(--hover-color))]"
-                           style="--color: #0028f030; --hover-color: #0028f040;" aria-label="نادي الهلال"
-                           href="/ar/organizations/blu-alhilal?utm_source=r5-1&amp;utm_medium=Football_Clubs&amp;utm_content=Al-Hilal"><img
-                                src="https://images.ctfassets.net/vy53kjqs34an/54upDZykpCxgFQKqRRARYB/e35363ebc839dd6771c2f429494a07e6/al-hilal-logo.png"
-                                class="h-full" alt=""></a></div>
-                    <div class="embla__slide flex max-w-xs shrink-0 basis-[75%] px-2 md:basis-1/2 xl:basis-1/4">
-                        <a rel=""
-                           class="border-body-light relative flex h-40 w-full items-center justify-center overflow-hidden rounded-xl border bg-[linear-gradient(0deg,transparent,var(--color))] p-4 hover:bg-[linear-gradient(0deg,transparent,var(--hover-color))]"
-                           style="--color: #fccf2e30; --hover-color: #fccf2e40;" aria-label="نادي النصر"
-                           href="/ar/organizations/al-nassr?utm_source=r5-2&amp;utm_medium=Football_Clubs&amp;utm_content=Al-Nassr"><img
-                                src="https://images.ctfassets.net/vy53kjqs34an/5rj2lWjCqqi3gDxVI5Uos0/c076c58df69c2fa518d7c261af8d214f/al-nassr-logo.png"
-                                class="h-full" alt=""></a></div>
-                    <div class="embla__slide flex max-w-xs shrink-0 basis-[75%] px-2 md:basis-1/2 xl:basis-1/4">
-                        <a rel=""
-                           class="border-body-light relative flex h-40 w-full items-center justify-center overflow-hidden rounded-xl border bg-[linear-gradient(0deg,transparent,var(--color))] p-4 hover:bg-[linear-gradient(0deg,transparent,var(--hover-color))]"
-                           style="--color: #ffea0030; --hover-color: #ffea0040;" aria-label="نادي الإتحاد"
-                           href="/ar/organizations/al-ittihad-club?utm_source=r5-3&amp;utm_medium=Football_Clubs&amp;utm_content=Al-Ittihad FC"><img
-                                src="https://images.ctfassets.net/vy53kjqs34an/4YVqjwfV7qog0mffSe6Rjl/c80a006610e742ff56bf194be1f75c09/ittihad-logo.png"
-                                class="h-full" alt=""></a></div>
-                    <div class="embla__slide flex max-w-xs shrink-0 basis-[75%] px-2 md:basis-1/2 xl:basis-1/4">
-                        <a rel=""
-                           class="border-body-light relative flex h-40 w-full items-center justify-center overflow-hidden rounded-xl border bg-[linear-gradient(0deg,transparent,var(--color))] p-4 hover:bg-[linear-gradient(0deg,transparent,var(--hover-color))]"
-                           style="--color: #36b30030; --hover-color: #36b30040;" aria-label="نادي الأهلي"
-                           href="/ar/organizations/al-ahli-club?utm_source=r5-4&amp;utm_medium=Football_Clubs&amp;utm_content=Al Ahli FC"><img
-                                src="https://images.ctfassets.net/vy53kjqs34an/65Gc34QGJf2xnrwtdEr0L1/45b1f3a6503cac7ac5159cc6c9878e31/al-ahli-logo.png"
-                                class="h-full" alt=""></a></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-8"><img src="images/illustration/section-triangle.svg" width="1680" height="51" alt=""
-                               class="-mb-px block w-full">
-        <div class="bg-lime-900">
-            <div class="container py-4">
-                <h2 class="mb-2 flex gap-1.5 align-middle text-[27px] font-extrabold text-lime-500"><img
-                        src="icons/the_shop/WBKShop-ar.png" width="132" height="27" alt="webook shop logo">
-                </h2>
-                <p class="text-gray-400">المنتجات المميزة المختارة لك</p>
-                <div class="embla">
-                    <div class="embla__viewport">
-                        <div class="embla__container" style="transform: translate3d(0px, 0px, 0px);">
-                            <div
-                                class="embla__slide relative mr-2 max-w-[200px] shrink-0 basis-[50%] sm:basis-1/3 xl:basis-1/5">
-                                <a href="https://webook.com/shop/shop/%d8%aa%d9%8a%d8%b4%d9%8a%d8%b1%d8%aa-%d8%a7%d9%84%d8%a7%d8%aa%d8%ad%d8%a7%d8%af-%d8%a7%d9%84%d8%a3%d8%b3%d8%a7%d8%b3%d9%8a-23-24-%d9%83%d8%a8%d8%a7%d8%b1/"
-                                   target="_blank"
-                                   class="flex h-full flex-col overflow-hidden rounded-lg shadow-[0px_2px_4px_-1px_#0000000F,0px_4px_6px_-1px_#0000001A]"><img
-                                        src="https://webook.com/shop/wp-content/uploads/2024/04/اساسي-copy.png"
-                                        alt="تيشيرت الاتحاد الأساسي 23/24 – كبار" width="300" height="300">
-                                    <div class="flex grow flex-col gap-1.5 bg-zinc-900 px-2 py-3">
-                                        <div class="line-clamp-2 grow text-sm font-semibold text-gray-100">
-                                            تيشيرت الاتحاد الأساسي 23/24 – كبار</div>
-                                        <div class="flex items-center gap-2 text-xs">
-                                            <p class="">315 ر.س</p>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div
-                                class="embla__slide relative mr-2 max-w-[200px] shrink-0 basis-[50%] sm:basis-1/3 xl:basis-1/5">
-                                <a href="https://webook.com/shop/shop/%d8%aa%d9%8a%d8%b4%d9%8a%d8%b1%d8%aa-%d8%a7%d9%84%d8%a7%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d8%a7%d8%b3%d8%a7%d8%b3%d9%8a-23-24-%d9%83%d8%a8%d8%a7%d8%b1/"
-                                   target="_blank"
-                                   class="flex h-full flex-col overflow-hidden rounded-lg shadow-[0px_2px_4px_-1px_#0000000F,0px_4px_6px_-1px_#0000001A]"><img
-                                        src="https://webook.com/shop/wp-content/uploads/2024/04/اساسي-copy-1.png"
-                                        alt="تيشيرت الاهلي الاساسي 23/24 – كبار" width="300" height="300">
-                                    <div class="flex grow flex-col gap-1.5 bg-zinc-900 px-2 py-3">
-                                        <div class="line-clamp-2 grow text-sm font-semibold text-gray-100">
-                                            تيشيرت الاهلي الاساسي 23/24 – كبار</div>
-                                        <div class="flex items-center gap-2 text-xs">
-                                            <p class="">390 ر.س</p>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div
-                                class="embla__slide relative mr-2 max-w-[200px] shrink-0 basis-[50%] sm:basis-1/3 xl:basis-1/5">
-                                <a href="https://webook.com/shop/shop/%d8%aa%d9%8a%d8%b4%d9%8a%d8%b1%d8%aa-%d8%a7%d9%84%d9%86%d8%b5%d8%b1-%d8%a7%d9%84%d8%a3%d8%b3%d8%a7%d8%b3%d9%8a-23-24-%d9%83%d8%a8%d8%a7%d8%b1/"
-                                   target="_blank"
-                                   class="flex h-full flex-col overflow-hidden rounded-lg shadow-[0px_2px_4px_-1px_#0000000F,0px_4px_6px_-1px_#0000001A]"><img
-                                        src="https://webook.com/shop/wp-content/uploads/2024/03/1.png"
-                                        alt="تيشيرت النصر الأساسي 23/24 &amp;#8211; كبار" width="300"
-                                        height="300">
-                                    <div class="flex grow flex-col gap-1.5 bg-zinc-900 px-2 py-3">
-                                        <div class="line-clamp-2 grow text-sm font-semibold text-gray-100">
-                                            تيشيرت النصر الأساسي 23/24 – كبار</div>
-                                        <div class="flex items-center gap-2 text-xs">
-                                            <p class="">341.11 ر.س</p>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div
-                                class="embla__slide relative mr-2 max-w-[200px] shrink-0 basis-[50%] sm:basis-1/3 xl:basis-1/5">
-                                <a href="https://webook.com/shop/shop/%d8%aa%d9%8a%d8%b4%d9%8a%d8%b1%d8%aa-%d8%a7%d9%84%d9%87%d9%84%d8%a7%d9%84-%d8%a7%d9%84%d8%a3%d8%b3%d8%a7%d8%b3%d9%8a-23-24-%d9%83%d8%a8%d8%a7%d8%b1/"
-                                   target="_blank"
-                                   class="flex h-full flex-col overflow-hidden rounded-lg shadow-[0px_2px_4px_-1px_#0000000F,0px_4px_6px_-1px_#0000001A]"><img
-                                        src="https://webook.com/shop/wp-content/uploads/2024/04/اساسي-3.png"
-                                        alt="تيشيرت الهلال الأساسي 23/24 – كبار" width="300" height="300">
-                                    <div class="flex grow flex-col gap-1.5 bg-zinc-900 px-2 py-3">
-                                        <div class="line-clamp-2 grow text-sm font-semibold text-gray-100">
-                                            تيشيرت الهلال الأساسي 23/24 – كبار</div>
-                                        <div class="flex items-center gap-2 text-xs">
-                                            <p class="">396 ر.س</p>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div
-                                class="embla__slide relative mr-2 max-w-[200px] shrink-0 basis-[50%] sm:basis-1/3 xl:basis-1/5">
-                                <a href="https://webook.com/shop/shop/11872/" target="_blank"
-                                   class="flex h-full flex-col overflow-hidden rounded-lg shadow-[0px_2px_4px_-1px_#0000000F,0px_4px_6px_-1px_#0000001A]"><img
-                                        src="https://webook.com/shop/wp-content/uploads/2024/03/1-copy-44-2.png"
-                                        alt="تيشيرت منتخب البرازيل موقع من نيمار جونيور" width="300"
-                                        height="300">
-                                    <div class="flex grow flex-col gap-1.5 bg-zinc-900 px-2 py-3">
-                                        <div class="line-clamp-2 grow text-sm font-semibold text-gray-100">
-                                            تيشيرت منتخب البرازيل موقع من نيمار جونيور</div>
-                                        <div class="flex items-center gap-2 text-xs">
-                                            <p class="">5,600 ر.س</p>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div
-                                class="embla__slide relative mr-2 max-w-[200px] shrink-0 basis-[50%] sm:basis-1/3 xl:basis-1/5">
-                                <a href="https://webook.com/shop/shop/%d8%aa%d9%8a%d8%b4%d9%8a%d8%b1%d8%aa-%d9%85%d9%86%d8%aa%d8%ae%d8%a8-%d8%a7%d9%84%d9%85%d8%a7%d9%86%d9%8a%d8%a7-%d9%85%d9%88%d9%82%d8%b9-%d9%85%d9%86-%d9%85%d8%a7%d9%8a%d9%83%d9%84-%d8%a8%d8%a7%d9%84/"
-                                   target="_blank"
-                                   class="flex h-full flex-col overflow-hidden rounded-lg shadow-[0px_2px_4px_-1px_#0000000F,0px_4px_6px_-1px_#0000001A]"><img
-                                        src="https://webook.com/shop/wp-content/uploads/2024/03/1-copy-52-1.png"
-                                        alt="تيشيرت منتخب المانيا موقع من مايكل بالاك" width="300" height="300">
-                                    <div class="flex grow flex-col gap-1.5 bg-zinc-900 px-2 py-3">
-                                        <div class="line-clamp-2 grow text-sm font-semibold text-gray-100">
-                                            تيشيرت منتخب المانيا موقع من مايكل بالاك</div>
-                                        <div class="flex items-center gap-2 text-xs">
-                                            <p class="">4,200 ر.س</p>
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div
-                                class="embla__slide relative mr-2 max-w-[200px] shrink-0 basis-[50%] sm:basis-1/3 xl:basis-1/5">
-                                <a href="https://webook.com/shop/shop/%d9%82%d9%85%d9%8a%d8%b5-%d9%85%d9%86%d8%aa%d8%ae%d8%a8-%d9%85%d8%b5%d8%b1-%d9%85%d9%88%d9%82%d8%b9-%d9%85%d9%86-%d9%85%d8%ad%d9%85%d8%af-%d8%b5%d9%84%d8%a7%d8%ad/"
-                                   target="_blank"
-                                   class="flex h-full flex-col overflow-hidden rounded-lg shadow-[0px_2px_4px_-1px_#0000000F,0px_4px_6px_-1px_#0000001A]"><img
-                                        src="https://webook.com/shop/wp-content/uploads/2024/03/1-copy-35-1.png"
-                                        alt="تيشيرت منتخب مصر موقع من محمد صلاح" width="300" height="300">
-                                    <div class="flex grow flex-col gap-1.5 bg-zinc-900 px-2 py-3">
-                                        <div class="line-clamp-2 grow text-sm font-semibold text-gray-100">
-                                            تيشيرت منتخب مصر موقع من محمد صلاح</div>
-                                        <div class="flex items-center gap-2 text-xs">
-                                            <p class="">6,000 ر.س</p>
-                                        </div>
-                                    </div>
-                                </a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex items-center justify-center py-4"><a
-                        class="ring-primary focus:ring-1 ring-offset-2 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md h-11 w-full max-w-[360px] bg-lime-500 text-[17px] font-semibold text-black hover:bg-lime-400 focus:ring-lime-600 active:bg-lime-600"
-                        target="_blank" href="https://webook.com/shop"> انتقل إلى متجر webook<svg width="18"
-                                                                                                  height="18" viewBox="0 0 32 32" fill="none" class="shrink-0 ltr:rotate-180">
-                            <path
-                                d="M20.9426 8.94263C21.4633 8.42194 21.4633 7.57772 20.9426 7.05703C20.4219 6.53633 19.5777 6.53633 19.057 7.05703L11.057 15.057C10.5523 15.5618 10.5346 16.3745 11.017 16.9007L18.3503 24.9007C18.8478 25.4435 19.6913 25.4802 20.2341 24.9826C20.7769 24.485 20.8136 23.6416 20.316 23.0988L13.8453 16.0399L20.9426 8.94263Z"
-                                fill="currentColor"></path>
-                        </svg></a></div>
-            </div>
-        </div><img src="https://webook.com/images/illustration/section-triangle.svg" width="1680" height="51" alt=""
-                   class="-mt-px block w-full -scale-100">
-    </section>
+
     <section class="container relative py-12">
         <div class="flex items-center justify-between space-y-4 md:flex-row md:space-y-0">
             <div>
@@ -872,10 +563,10 @@
             </div>
             <div class="flex gap-2"><button
                     class="hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 focus:ring-1 ring-offset-body relative gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-white/30 p-0"
-                    aria-label="Previous"> <img src="https://webook.com/icons/common/arrow.svg" class="ltr:rotate-180" alt=""
+                    aria-label="Previous"> <img src="{{asset('/icons/common/arrow.svg')}}" class="ltr:rotate-180" alt=""
                                                 width="24" height="24"></button><button
                     class="hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 focus:ring-1 ring-offset-body relative gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-white/30 p-0"
-                    aria-label="Next"> <img src="https://webook.com/icons/common/arrow.svg" class="rtl:rotate-180" alt=""
+                    aria-label="Next"> <img src="{{asset('/icons/common/arrow.svg')}}" class="rtl:rotate-180" alt=""
                                             width="24" height="24"></button></div>
         </div>
         <div class="embla">
@@ -1224,376 +915,30 @@
             </div>
         </div>
     </section>
-    <section class="container relative py-12">
-        <div class="flex items-center justify-between space-y-4 md:flex-row md:space-y-0">
-            <div>
-                <h2>مغامرات الصيف</h2>
-            </div>
-            <div class="flex gap-2"><button
-                    class="hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 focus:ring-1 ring-offset-body relative gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-white/30 p-0"
-                    aria-label="Previous"> <img src="https://webook.com/icons/common/arrow.svg" class="ltr:rotate-180" alt=""
-                                                width="24" height="24"></button><button
-                    class="hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 focus:ring-1 ring-offset-body relative gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-white/30 p-0"
-                    aria-label="Next"> <img src="https://webook.com/icons/common/arrow.svg" class="rtl:rotate-180" alt=""
-                                            width="24" height="24"></button></div>
-        </div>
-        <div class="embla">
-            <div class="embla__viewport py-0.5">
-                <div class="embla__container" style="transform: translate3d(-549px, 0px, 0px);">
-                    <div class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]"
-                         style="transform: translate3d(0px, 0px, 0px);">
-                        <div class="flex h-full w-full" style="transform: translateX(0%) scale(1);"><a
-                                class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                                to="/ar/experiences/discover-bayada-island?utm_source=r9-1&amp;utm_medium=HY_Experiences&amp;utm_content=Discover Bayada Island"
-                                href="/ar/experiences/discover-bayada-island?utm_source=r9-1&amp;utm_medium=HY_Experiences&amp;utm_content=Discover Bayada Island">
-                                <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
-                                    <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/2kVXVaSNJCFJXGdoHSPNeW/4a60c6490aa771682d7dff6366b10428/bayadh-ar-11.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
-                                            class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
-                                            width="600" height="600" alt="رحلة بحرية لاكتشاف جزيرة بياضة"
-                                            data-loaded="true" srcset=""></div>
-                                    <div class="text-text space-y-0.5 pt-2 text-start">
-                                        <div class="text-sm leading-none text-gray-400"><span>تجربة</span></div>
-                                        <p class="line-clamp-2">رحلة بحرية لاكتشاف جزيرة بياضة</p>
-                                        <div>
-                                            <div class="flex items-center gap-1">
-                                                <p class="text-sm text-gray-400">يبدأ من</p>
-                                                <p class="font-semibold">700 ر.س</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-1 rounded-md text-xs py-1">
-                                            <div style="color: rgb(228, 228, 231);"><svg width="24" height="24"
-                                                                                         viewBox="0 0 24 24" fill="none"
-                                                                                         class="rtl:-scale-x-100 h-4 w-4"
-                                                                                         xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="15.8891" y="7.19678" width="2" height="14" rx="1"
-                                                          transform="rotate(45 15.8891 7.19678)"
-                                                          fill="currentColor"></rect>
-                                                    <path
-                                                        d="M8.1109 8.90381C7.55862 8.90381 7.1109 8.45609 7.1109 7.90381C7.1109 7.35152 7.55862 6.90381 8.1109 6.90381L16.5962 6.90381C17.1316 6.90381 17.572 7.32549 17.5952 7.86037L17.9488 15.9921C17.9728 16.5439 17.5449 17.0106 16.9932 17.0346C16.4414 17.0586 15.9747 16.6307 15.9507 16.079L15.6387 8.90381H8.1109Z"
-                                                        fill="currentColor"></path>
-                                                </svg></div>
-                                            <p class="leading-none text-gray-400">حجز خارجي</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a></div>
-                    </div>
-                    <div class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]"
-                         style="transform: translate3d(0px, 0px, 0px);">
-                        <div class="flex h-full w-full" style="transform: translateX(5.4423%) scale(0.875303);">
-                            <a class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                               to="/ar/experiences/boat-trip-diving-adventure-in-ayona-or-alfasma?utm_source=r9-2&amp;utm_medium=HY_Experiences&amp;utm_content=Boat Trip &amp; Diving Adventure in Ayona or Alfasma"
-                               href="/ar/experiences/boat-trip-diving-adventure-in-ayona-or-alfasma?utm_source=r9-2&amp;utm_medium=HY_Experiences&amp;utm_content=Boat Trip &amp; Diving Adventure in Ayona or Alfasma">
-                                <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
-                                    <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/5Fds06uqxXigSfEUF80W8C/a2f7cb9cca9da476a154343aac00a0b2/diving-ar-11.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
-                                            class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
-                                            width="600" height="600"
-                                            alt="رحلة بالقارب ومغامرة الغوص في أيونا أو الفصمة"
-                                            data-loaded="true" srcset=""></div>
-                                    <div class="text-text space-y-0.5 pt-2 text-start">
-                                        <div class="text-sm leading-none text-gray-400"><span>تجربة</span></div>
-                                        <p class="line-clamp-2">رحلة بالقارب ومغامرة الغوص في أيونا أو الفصمة
-                                        </p>
-                                        <div>
-                                            <div class="flex items-center gap-1">
-                                                <p class="text-sm text-gray-400">يبدأ من</p>
-                                                <p class="font-semibold">250 ر.س</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-1 rounded-md text-xs py-1">
-                                            <div style="color: rgb(228, 228, 231);"><svg width="24" height="24"
-                                                                                         viewBox="0 0 24 24" fill="none"
-                                                                                         class="rtl:-scale-x-100 h-4 w-4"
-                                                                                         xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="15.8891" y="7.19678" width="2" height="14" rx="1"
-                                                          transform="rotate(45 15.8891 7.19678)"
-                                                          fill="currentColor"></rect>
-                                                    <path
-                                                        d="M8.1109 8.90381C7.55862 8.90381 7.1109 8.45609 7.1109 7.90381C7.1109 7.35152 7.55862 6.90381 8.1109 6.90381L16.5962 6.90381C17.1316 6.90381 17.572 7.32549 17.5952 7.86037L17.9488 15.9921C17.9728 16.5439 17.5449 17.0106 16.9932 17.0346C16.4414 17.0586 15.9747 16.6307 15.9507 16.079L15.6387 8.90381H8.1109Z"
-                                                        fill="currentColor"></path>
-                                                </svg></div>
-                                            <p class="leading-none text-gray-400">حجز خارجي</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a></div>
-                    </div>
-                    <div class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]"
-                         style="transform: translate3d(0px, 0px, 0px);">
-                        <div class="flex h-full w-full"
-                             style="transform: translateX(21.8397%) scale(0.750202);"><a
-                                class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                                to="/ar/experiences/relive-saudi-s-medieval-age-on-a-tour-of-al-jahel-museum?utm_source=r9-3&amp;utm_medium=HY_Experiences&amp;utm_content=Al Jahel Museum Tour: Relive Saudi's Medieval Age"
-                                href="/ar/experiences/relive-saudi-s-medieval-age-on-a-tour-of-al-jahel-museum?utm_source=r9-3&amp;utm_medium=HY_Experiences&amp;utm_content=Al Jahel Museum Tour: Relive Saudi's Medieval Age">
-                                <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
-                                    <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/6jSJcIlrrlM3NGMoLD8LXZ/d8ea805c9579e5b0a88b78959f6336b1/jahel-ar-11.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
-                                            class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
-                                            width="600" height="600"
-                                            alt="استكشف معيشة القدماء عن قرب في متحف الجحل" data-loaded="true"
-                                            srcset=""></div>
-                                    <div class="text-text space-y-0.5 pt-2 text-start">
-                                        <div class="text-sm leading-none text-gray-400"><span>تجربة</span></div>
-                                        <p class="line-clamp-2">استكشف معيشة القدماء عن قرب في متحف الجحل</p>
-                                        <div>
-                                            <div class="flex items-center gap-1">
-                                                <p class="text-sm text-gray-400">يبدأ من</p>
-                                                <p class="font-semibold">24 ر.س</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-1 rounded-md text-xs py-1">
-                                            <div style="color: rgb(228, 228, 231);"><svg width="24" height="24"
-                                                                                         viewBox="0 0 24 24" fill="none"
-                                                                                         class="rtl:-scale-x-100 h-4 w-4"
-                                                                                         xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="15.8891" y="7.19678" width="2" height="14" rx="1"
-                                                          transform="rotate(45 15.8891 7.19678)"
-                                                          fill="currentColor"></rect>
-                                                    <path
-                                                        d="M8.1109 8.90381C7.55862 8.90381 7.1109 8.45609 7.1109 7.90381C7.1109 7.35152 7.55862 6.90381 8.1109 6.90381L16.5962 6.90381C17.1316 6.90381 17.572 7.32549 17.5952 7.86037L17.9488 15.9921C17.9728 16.5439 17.5449 17.0106 16.9932 17.0346C16.4414 17.0586 15.9747 16.6307 15.9507 16.079L15.6387 8.90381H8.1109Z"
-                                                        fill="currentColor"></path>
-                                                </svg></div>
-                                            <p class="leading-none text-gray-400">حجز خارجي</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a></div>
-                    </div>
-                    <div
-                        class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]">
-                        <div class="flex h-full w-full"
-                             style="transform: translateX(49.1923%) scale(0.625101);"><a
-                                class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                                to="/ar/experiences/explore-the-wildlife-nature-in-sharaan?utm_source=r9-4&amp;utm_medium=HY_Experiences&amp;utm_content=Explore the Wildlife and Nature in Sharaan Nature Reserve"
-                                href="/ar/experiences/explore-the-wildlife-nature-in-sharaan?utm_source=r9-4&amp;utm_medium=HY_Experiences&amp;utm_content=Explore the Wildlife and Nature in Sharaan Nature Reserve">
-                                <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
-                                    <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/2Uixz5eJEELfwJXYqbbBg1/7da0d52afe93f1e9532fffeb88ca09de/sharaan-ar-11.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
-                                            class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
-                                            width="600" height="600"
-                                            alt="اكتشف الحياة البرية والطبيعة في محمية شرعان الطبيعية"
-                                            data-loaded="true" srcset=""></div>
-                                    <div class="text-text space-y-0.5 pt-2 text-start">
-                                        <div class="text-sm leading-none text-gray-400"><span>تجربة</span></div>
-                                        <p class="line-clamp-2">اكتشف الحياة البرية والطبيعة في محمية شرعان
-                                            الطبيعية</p>
-                                        <div>
-                                            <div class="flex items-center gap-1">
-                                                <p class="text-sm text-gray-400">يبدأ من</p>
-                                                <p class="font-semibold">1,139 ر.س</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-1 rounded-md text-xs py-1">
-                                            <div style="color: rgb(228, 228, 231);"><svg width="24" height="24"
-                                                                                         viewBox="0 0 24 24" fill="none"
-                                                                                         class="rtl:-scale-x-100 h-4 w-4"
-                                                                                         xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="15.8891" y="7.19678" width="2" height="14" rx="1"
-                                                          transform="rotate(45 15.8891 7.19678)"
-                                                          fill="currentColor"></rect>
-                                                    <path
-                                                        d="M8.1109 8.90381C7.55862 8.90381 7.1109 8.45609 7.1109 7.90381C7.1109 7.35152 7.55862 6.90381 8.1109 6.90381L16.5962 6.90381C17.1316 6.90381 17.572 7.32549 17.5952 7.86037L17.9488 15.9921C17.9728 16.5439 17.5449 17.0106 16.9932 17.0346C16.4414 17.0586 15.9747 16.6307 15.9507 16.079L15.6387 8.90381H8.1109Z"
-                                                        fill="currentColor"></path>
-                                                </svg></div>
-                                            <p class="leading-none text-gray-400">حجز خارجي</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a></div>
-                    </div>
-                    <div
-                        class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]">
-                        <div class="flex h-full w-full" style="transform: translateX(87.5%) scale(0.5);"><a
-                                class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                                to="/ar/experiences/sea-adventure-exploring-al-khor-on-a-boat-trip?utm_source=r9-5&amp;utm_medium=HY_Experiences&amp;utm_content=Sea Adventure Exploring Al Khor on a Boat Trip"
-                                href="/ar/experiences/sea-adventure-exploring-al-khor-on-a-boat-trip?utm_source=r9-5&amp;utm_medium=HY_Experiences&amp;utm_content=Sea Adventure Exploring Al Khor on a Boat Trip">
-                                <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
-                                    <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/14aSIDpxrv1Vafb12wzMTR/9f25005bef2d4f50c7844f55dbf87243/sea-trip-ar-11.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
-                                            class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
-                                            width="600" height="600"
-                                            alt="مغامرة بحرية لاستكشاف الخور في رحلة على متن قارب"
-                                            data-loaded="true" srcset=""></div>
-                                    <div class="text-text space-y-0.5 pt-2 text-start">
-                                        <div class="text-sm leading-none text-gray-400"><span>تجربة</span></div>
-                                        <p class="line-clamp-2">مغامرة بحرية لاستكشاف الخور في رحلة على متن قارب
-                                        </p>
-                                        <div>
-                                            <div class="flex items-center gap-1">
-                                                <p class="text-sm text-gray-400">يبدأ من</p>
-                                                <p class="font-semibold">225 ر.س</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-1 rounded-md text-xs py-1">
-                                            <div style="color: rgb(228, 228, 231);"><svg width="24" height="24"
-                                                                                         viewBox="0 0 24 24" fill="none"
-                                                                                         class="rtl:-scale-x-100 h-4 w-4"
-                                                                                         xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="15.8891" y="7.19678" width="2" height="14" rx="1"
-                                                          transform="rotate(45 15.8891 7.19678)"
-                                                          fill="currentColor"></rect>
-                                                    <path
-                                                        d="M8.1109 8.90381C7.55862 8.90381 7.1109 8.45609 7.1109 7.90381C7.1109 7.35152 7.55862 6.90381 8.1109 6.90381L16.5962 6.90381C17.1316 6.90381 17.572 7.32549 17.5952 7.86037L17.9488 15.9921C17.9728 16.5439 17.5449 17.0106 16.9932 17.0346C16.4414 17.0586 15.9747 16.6307 15.9507 16.079L15.6387 8.90381H8.1109Z"
-                                                        fill="currentColor"></path>
-                                                </svg></div>
-                                            <p class="leading-none text-gray-400">حجز خارجي</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a></div>
-                    </div>
-                    <div
-                        class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]">
-                        <div class="flex h-full w-full"
-                             style="transform: translateX(136.763%) scale(0.374899);"><a
-                                class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                                to="/ar/experiences/unique-camel-back-safari-at-nofa-wildlife-park?utm_source=r9-6&amp;utm_medium=HY_Experiences&amp;utm_content=Embark On An Unforgettable Adventure: Camel-Back Safari at Nofa"
-                                href="/ar/experiences/unique-camel-back-safari-at-nofa-wildlife-park?utm_source=r9-6&amp;utm_medium=HY_Experiences&amp;utm_content=Embark On An Unforgettable Adventure: Camel-Back Safari at Nofa">
-                                <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
-                                    <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/55BR0uESPFX1ucPHMvAQHW/bdda23cde0f066facefe5b9f70117c16/nofa-ar-11.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
-                                            class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
-                                            width="600" height="600"
-                                            alt="انطلق في مغامرة لا تنسى: سفاري على ظهر الجمل في حديقة نوفا"
-                                            data-loaded="true" srcset=""></div>
-                                    <div class="text-text space-y-0.5 pt-2 text-start">
-                                        <div class="text-sm leading-none text-gray-400"><span>تجربة</span></div>
-                                        <p class="line-clamp-2">انطلق في مغامرة لا تنسى: سفاري على ظهر الجمل في
-                                            حديقة نوفا</p>
-                                        <div>
-                                            <div class="flex items-center gap-1">
-                                                <p class="text-sm text-gray-400">يبدأ من</p>
-                                                <p class="font-semibold">200 ر.س</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-1 rounded-md text-xs py-1">
-                                            <div style="color: rgb(228, 228, 231);"><svg width="24" height="24"
-                                                                                         viewBox="0 0 24 24" fill="none"
-                                                                                         class="rtl:-scale-x-100 h-4 w-4"
-                                                                                         xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="15.8891" y="7.19678" width="2" height="14" rx="1"
-                                                          transform="rotate(45 15.8891 7.19678)"
-                                                          fill="currentColor"></rect>
-                                                    <path
-                                                        d="M8.1109 8.90381C7.55862 8.90381 7.1109 8.45609 7.1109 7.90381C7.1109 7.35152 7.55862 6.90381 8.1109 6.90381L16.5962 6.90381C17.1316 6.90381 17.572 7.32549 17.5952 7.86037L17.9488 15.9921C17.9728 16.5439 17.5449 17.0106 16.9932 17.0346C16.4414 17.0586 15.9747 16.6307 15.9507 16.079L15.6387 8.90381H8.1109Z"
-                                                        fill="currentColor"></path>
-                                                </svg></div>
-                                            <p class="leading-none text-gray-400">حجز خارجي</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a></div>
-                    </div>
-                    <div class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]"
-                         style="transform: translate3d(2478px, 0px, 0px);">
-                        <div class="flex h-full w-full"
-                             style="transform: translateX(-21.9103%) scale(0.749798);"><a
-                                class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                                to="/ar/experiences/beach-horse-riding-experience-in-jeddah?utm_source=r9-7&amp;utm_medium=HY_Experiences&amp;utm_content=Beach horse riding experience in Jeddah"
-                                href="/ar/experiences/beach-horse-riding-experience-in-jeddah?utm_source=r9-7&amp;utm_medium=HY_Experiences&amp;utm_content=Beach horse riding experience in Jeddah">
-                                <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
-                                    <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/6FKg3TJwwZuXjeOEmWVbuI/90c06f888281826923af2b396be7490f/beach-horse-ar-11.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
-                                            class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
-                                            width="600" height="600" alt="فروسيّة على شاطئ البحر في جدة"
-                                            data-loaded="true" srcset=""></div>
-                                    <div class="text-text space-y-0.5 pt-2 text-start">
-                                        <div class="text-sm leading-none text-gray-400"><span>تجربة</span></div>
-                                        <p class="line-clamp-2">فروسيّة على شاطئ البحر في جدة</p>
-                                        <div>
-                                            <div class="flex items-center gap-1">
-                                                <p class="text-sm text-gray-400">يبدأ من</p>
-                                                <p class="font-semibold">495 ر.س</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-1 rounded-md text-xs py-1">
-                                            <div style="color: rgb(228, 228, 231);"><svg width="24" height="24"
-                                                                                         viewBox="0 0 24 24" fill="none"
-                                                                                         class="rtl:-scale-x-100 h-4 w-4"
-                                                                                         xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="15.8891" y="7.19678" width="2" height="14" rx="1"
-                                                          transform="rotate(45 15.8891 7.19678)"
-                                                          fill="currentColor"></rect>
-                                                    <path
-                                                        d="M8.1109 8.90381C7.55862 8.90381 7.1109 8.45609 7.1109 7.90381C7.1109 7.35152 7.55862 6.90381 8.1109 6.90381L16.5962 6.90381C17.1316 6.90381 17.572 7.32549 17.5952 7.86037L17.9488 15.9921C17.9728 16.5439 17.5449 17.0106 16.9932 17.0346C16.4414 17.0586 15.9747 16.6307 15.9507 16.079L15.6387 8.90381H8.1109Z"
-                                                        fill="currentColor"></path>
-                                                </svg></div>
-                                            <p class="leading-none text-gray-400">حجز خارجي</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a></div>
-                    </div>
-                    <div class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]"
-                         style="transform: translate3d(2478px, 0px, 0px);">
-                        <div class="flex h-full w-full"
-                             style="transform: translateX(-5.47758%) scale(0.874899);"><a
-                                class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                                to="/ar/experiences/horseback-riding-for-women-at-al-farisa-equestrian?utm_source=r9-8&amp;utm_medium=HY_Experiences&amp;utm_content=Horseback Riding for Women at Al Farisa Equestrian"
-                                href="/ar/experiences/horseback-riding-for-women-at-al-farisa-equestrian?utm_source=r9-8&amp;utm_medium=HY_Experiences&amp;utm_content=Horseback Riding for Women at Al Farisa Equestrian">
-                                <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
-                                    <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/4FPl8Iz1fSgEW84hcYJ5eB/63e9287a49fcefb9d9c7fda5f09aed09/horse-riding-ar-11.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
-                                            class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
-                                            width="600" height="600" alt="ركوب الخيل للسيدات في نادي الفارسة"
-                                            data-loaded="true" srcset=""></div>
-                                    <div class="text-text space-y-0.5 pt-2 text-start">
-                                        <div class="text-sm leading-none text-gray-400"><span>تجربة</span></div>
-                                        <p class="line-clamp-2">ركوب الخيل للسيدات في نادي الفارسة</p>
-                                        <div>
-                                            <div class="flex items-center gap-1">
-                                                <p class="text-sm text-gray-400">يبدأ من</p>
-                                                <p class="font-semibold">49 ر.س</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-1 rounded-md text-xs py-1">
-                                            <div style="color: rgb(228, 228, 231);"><svg width="24" height="24"
-                                                                                         viewBox="0 0 24 24" fill="none"
-                                                                                         class="rtl:-scale-x-100 h-4 w-4"
-                                                                                         xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="15.8891" y="7.19678" width="2" height="14" rx="1"
-                                                          transform="rotate(45 15.8891 7.19678)"
-                                                          fill="currentColor"></rect>
-                                                    <path
-                                                        d="M8.1109 8.90381C7.55862 8.90381 7.1109 8.45609 7.1109 7.90381C7.1109 7.35152 7.55862 6.90381 8.1109 6.90381L16.5962 6.90381C17.1316 6.90381 17.572 7.32549 17.5952 7.86037L17.9488 15.9921C17.9728 16.5439 17.5449 17.0106 16.9932 17.0346C16.4414 17.0586 15.9747 16.6307 15.9507 16.079L15.6387 8.90381H8.1109Z"
-                                                        fill="currentColor"></path>
-                                                </svg></div>
-                                            <p class="leading-none text-gray-400">حجز خارجي</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="container">
         <div class="my-10 flex flex-col overflow-hidden rounded-[24px] bg-violet-500 lg:flex-row lg:gap-6">
             <div
                 class="border-b border-white/30 bg-[url(/images/app/pattern.png)] bg-[100%_50%] lg:border-none rtl:bg-[0%_50%]">
-                <img class="mx-auto" src="https://webook.com/images/app/iphones.png" alt=""></div>
+                <img class="mx-auto" src="{{asset('/images/app/iphones.png')}}" alt=""></div>
             <div class="flex-1 self-center p-4 lg:pb-8">
                 <div class="lg:py-4">
                     <h2 class="mb-4 text-2xl font-semibold leading-tight text-gray-100 xl:text-5xl">حمل التطبيق
                         لدخول السحب على جوائز آيفون أسبوعية!</h2>
                     <div class="flex flex-row items-center gap-2 xl:gap-4"><a class="hover:opacity-80"
                                                                               href="https://apps.apple.com/us/app/webook-com-fun-things-to-do/id6468667896"
-                                                                              target="_blank" rel="noopener noreferrer"><img src="https://webook.com/images/app/appstore.svg"
+                                                                              target="_blank" rel="noopener noreferrer"><img src="{{asset('/images/app/appstore.svg')}}"
                                                                                                                              alt="appstore" width="105" height="35"></a><a class="hover:opacity-80"
                                                                                                                                                                            href="https://play.google.com/store/apps/details?id=com.webook.android"
-                                                                                                                                                                           target="_blank" rel="noopener noreferrer"><img src="https://webook.com/images/app/playstore.svg"
+                                                                                                                                                                           target="_blank" rel="noopener noreferrer"><img src="{{asset('/images/app/playstore.svg')}}"
                                                                                                                                                                                                                           alt="playstore" width="115" height="35"></a><a class="hover:opacity-80"
                                                                                                                                                                                                                                                                          href="https://appgallery.huawei.com/app/C109536445" target="_blank"
-                                                                                                                                                                                                                                                                         rel="noopener noreferrer"><img src="https://webook.com/images/app/huawei.svg" alt="playstore"
+                                                                                                                                                                                                                                                                         rel="noopener noreferrer"><img src="{{asset('/images/app/huawei.svg')}}" alt="playstore"
                                                                                                                                                                                                                                                                                                         width="115" height="35"></a></div>
                 </div>
                 <div class="my-5 hidden h-px bg-white/20 lg:block"></div>
                 <div class="hidden items-center gap-6 lg:flex">
                     <div class="flex items-center justify-center rounded-xl bg-white p-3"><img
-                            src="https://webook.com/images/app/qr-code.png" alt="QR Code" width="110" height="110"></div>
+                            src="{{asset('/images/app/qr-code.png')}}" alt="QR Code" width="110" height="110"></div>
                     <div class="text-gray-100">امسح الرمز للتحميل</div>
                 </div>
             </div>

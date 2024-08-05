@@ -55,5 +55,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('events',EventsController::class);
     Route::resource('categories',CategoriesController::class);
     Route::resource('tickets',TicketsController::class);
+    Route::get('orders',[HomeController::class,'orders'])->name('orders');
+    Route::get('cards',[HomeController::class,'cards'])->name('cards');
 
 });

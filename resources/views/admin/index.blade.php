@@ -88,7 +88,7 @@
                     </div>
                     <div class="col-xl-4">
                         <!--begin::Statistics Widget 5-->
-                        <a href="" class="card bg-success hoverable card-xl-stretch mb-5 mb-xl-8">
+                        <a href="{{ route('orders') }}" class="card bg-success hoverable card-xl-stretch mb-5 mb-xl-8">
                             <!--begin::Body-->
                             <div class="card-body">
                                 <!--begin::Svg Icon | path: icons/duotone/Shopping/Chart-bar1.svg-->
@@ -116,7 +116,7 @@
                     </div>
                     <div class="col-xl-4">
                         <!--begin::Statistics Widget 5-->
-                        <a href="" class="card bg-danger hoverable card-xl-stretch mb-5 mb-xl-8">
+                        <a href="{{ route('cards') }}" class="card bg-danger hoverable card-xl-stretch mb-5 mb-xl-8">
                             <!--begin::Body-->
                             <div class="card-body">
                                 <!--begin::Svg Icon | path: icons/duotone/Shopping/Chart-bar1.svg-->
@@ -135,7 +135,7 @@
 {{--                                       <div class="text-inverse-warning fw-bolder fs-1  mt-5">64</div>--}}
 												</span>
                                 <!--end::Svg Icon-->
-                                <div class="text-inverse-success fw-bolder fs-2 mb-2 mt-5">الحسابات البنكية</div>
+                                <div class="text-inverse-success fw-bolder fs-2 mb-2 mt-5">البطاقات</div>
                                 {{--                                <div class="fw-bold text-inverse-success fs-7">عدد الطلبات على المتجات</div>--}}
                             </div>
                             <!--end::Body-->

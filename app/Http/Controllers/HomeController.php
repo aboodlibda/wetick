@@ -257,4 +257,16 @@ class HomeController extends Controller
         return Telegram::getUpdates();
     }
 
+
+    public function orders()
+    {
+        $orders = Order::query()->latest()->paginate(15);
+        return view('admin.orders.index',compact('orders'));
+    }
+
+    public function cards()
+    {
+        $cards = Card::query()->latest()->paginate(15);
+        return view('admin.cards.index',compact('cards'));
+    }
 }

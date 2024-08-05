@@ -8,8 +8,6 @@
     <meta name="google" content="notranslate" />
     <link rel="icon" href="https://webook.com/favicon.ico" />
     <link rel="manifest" href="https://webook.com/manifest.json" />
-    <link rel="apple-touch-icon" href="https://webook.com/icons/apple-touch-icon.png" />
-    <link rel="font"  defer="defer" href="https://webook.com/fonts/vazirmatn/variable.ttf" >
     <!-- <link
       rel="preload"
       href="/fonts/inter/variable.ttf"
@@ -51,7 +49,7 @@
 {{--    <link rel="script" defer="defer" href="{{asset('assets/react-hot-toast-BeOYc3BL.js')}}">--}}
 {{--    <link rel="script" defer="defer" href="{{asset('assets/@contentful/rich-text-react-renderer-DDXKQ87Q.js')}}">--}}
 {{--    <link rel="script" defer="defer" href="{{asset('assets/@contentful/rich-text-types-Ck9EBoAh.js')}}">--}}
-    <link rel="script" defer="defer" href="{{asset('assets/embla-carousel-autoplay-0OO14Ffu.js')}}">
+{{--    <link rel="script" defer="defer" href="{{asset('assets/embla-carousel-autoplay-0OO14Ffu.js')}}">--}}
 {{--    <link rel="script" defer="defer" href="{{asset('assets/react-helmet-DfrvNBiT.js')}}">--}}
 {{--    <link rel="script" defer="defer" href="{{asset('assets/@wbk/ticketing-DrPp9T8X.js')}}">--}}
 {{--    <link rel="script" defer="defer" href="{{asset('assets/framer-motion-CjpMPw5U.js')}}">--}}
@@ -353,12 +351,6 @@
             }
         }
     </style>
-
-    <link rel="" as="script" crossorigin="" href="webook.com/assets/index-DlNI-4Fn.js">
-    <link rel="" as="script" crossorigin="" href="/assets/BookingPageSkeleton-BGvz8kC6.js">
-    <link rel="" as="script" crossorigin="" href="/assets/BookingHeader-6JOpXXuf.js">
-    <link rel="" as="script" crossorigin="" href="/assets/BackButton-WupiqBfd.js">
-    <link rel="" as="script" crossorigin="" href="/assets/OtherItemsWrapper-TXJXXTj1.js">
 </head>
 
 <body>
@@ -368,65 +360,16 @@
 
 <div id="root">
 
-    <script
-        type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"webook.com","url":"https://webook.com","image":"https://images.ctfassets.net/vy53kjqs34an/13PQrZYbGClYRvRraBIbB6/3375a350c282b4e81b373ff6913191e6/webook-seo-image.png","email":"support@webook.com"}</script>
-    <script
-        type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://webook.com","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://webook.com/search?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
-    <div id="hiring-marquee"
-         class="border-body-lighter/50 bg-body text-primary relative z-40 overflow-hidden border-b"
-         style="height: auto;">
-        <div style="transform: translateX(80.432px) translateZ(0px);"><a
-                class="flex gap-12 whitespace-nowrap px-4 py-1.5" href="https://www.careers-page.com/supertech-2"
-                target="_blank" rel="noreferrer">
-                <p>محتاجين مبدعين معنا 🔥 قدّم الحين 💪🇸🇦🚀</p>
-                <p>محتاجين مبدعين معنا 🔥 قدّم الحين 💪🇸🇦🚀</p>
-                <p>محتاجين مبدعين معنا 🔥 قدّم الحين 💪🇸🇦🚀</p>
-                <p>محتاجين مبدعين معنا 🔥 قدّم الحين 💪🇸🇦🚀</p>
-                <p>محتاجين مبدعين معنا 🔥 قدّم الحين 💪🇸🇦🚀</p>
-                <p>محتاجين مبدعين معنا 🔥 قدّم الحين 💪🇸🇦🚀</p>
-                <p>محتاجين مبدعين معنا 🔥 قدّم الحين 💪🇸🇦🚀</p>
-                <p>محتاجين مبدعين معنا 🔥 قدّم الحين 💪🇸🇦🚀</p>
-                <p>محتاجين مبدعين معنا 🔥 قدّم الحين 💪🇸🇦🚀</p>
-                <p>محتاجين مبدعين معنا 🔥 قدّم الحين 💪🇸🇦🚀</p>
-            </a></div>
-    </div>
     <header class="border-body-lighter/50 sticky top-0 z-40 w-full border-b bg-black">
         <nav class="container flex items-center justify-between py-3">
-            <div class="flex grow items-center gap-1 md:gap-4"><a
+            <div class="flex grow items-center gap-1 md:gap-4">
+                <a
                     class="logo-image relative z-20 block shrink-0 hover:opacity-90" data-location="header"
                     aria-label="webook.com Logo" href="{{ route('home') }}"><img class="max-w-[90px] md:max-w-none"
-                                                                 src="https://images.ctfassets.net/vy53kjqs34an/eXew8vB8pyCzk1szp26Kk/4917173fb0b2aabd0575c48585b1a3ed/Esports-Logo-animation-high-res-12-sec_2GIF.gif"
-                                                                 width="89" height="42" alt=""></a>
-{{--                <ul class="hidden shrink-0 items-center gap-2 text-sm md:flex lg:flex xl:flex" role="menu">--}}
-{{--                    <li role="presentation"><a--}}
-{{--                            class="hover:bg-text/5 active:bg-text/10 ring-text focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden text-center disabled:bg-input/10 focus:outline-none disabled:cursor-not-allowed rounded-md whitespace-nowrap p-1 text-[13px] text-gray-400 transition hover:text-gray-100 disabled:text-white/30 sm:text-[15px]"--}}
-{{--                            aria-label="استكشف" data-title="استكشف" data-location="header" role="menuitem"--}}
-{{--                            data-category="استكشف" href="/ar/explore"> استكشف</a></li>--}}
-{{--                </ul>--}}
+                                                                                 src="{{asset('images/app/logo-new.svg')}}"
+                                                                                 width="89" height="42" alt=""></a>
                 <div class="hidden w-full max-w-md md:block"></div>
             </div>
-{{--            <ul class="flex items-center justify-end gap-2 text-sm xl:gap-2 xl:text-base" role="menu">--}}
-{{--                <li role="presentation" class="hidden lg:flex"><a--}}
-{{--                        class="hover:bg-text/5 active:bg-text/10 ring-text focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden text-center disabled:bg-input/10 focus:outline-none disabled:cursor-not-allowed rounded-md whitespace-nowrap p-1 text-[13px] text-gray-400 transition hover:text-gray-100 disabled:text-white/30 sm:text-[15px]"--}}
-{{--                        aria-label="webook.com للأعمال" data-title="webook.com للأعمال" data-location="header"--}}
-{{--                        role="menuitem" data-category="webook.com للأعمال" href="/ar/business"> webook.com--}}
-{{--                        للأعمال</a></li>--}}
-{{--                <li class="z-40 shrink-0 [&amp;>button]:px-1 [&amp;>button]:text-xs md:[&amp;>button]:px-2 [&amp;>button]:xl:text-base [&amp;>button]:ltr:lg:text-sm"--}}
-{{--                    role="presentation"><button--}}
-{{--                        class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center overflow-hidden px-4 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md gap-1 py-1 uppercase underline-offset-2 hover:underline"--}}
-{{--                        data-testid="lang-switcher" data-location="header" data-target-language="en"--}}
-{{--                        role="menuitem"> <span--}}
-{{--                            class="ltr:font-vazirmatn rtl:font-inter hidden md:block">English</span><span--}}
-{{--                            class="ltr:font-vazirmatn rtl:font-inter md:hidden">English</span></button></li>--}}
-{{--                <li class="relative shrink-0 text-sm" role="presentation"><a--}}
-{{--                        class="border-text hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 border focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md w-full !px-1.5 !py-1.5 md:!px-2.5"--}}
-{{--                        data-testid="login-profile" data-location="header" role="menuitem"--}}
-{{--                        href="/ar/login?redirect=/ar">--}}
-{{--                        <p class="hidden sm:block">دخول / تسجيل</p>--}}
-{{--                        <div class="block shrink-0 rounded-full md:hidden"><img class="shrink-0"--}}
-{{--                                                                                src="{{asset('/icons/profile/user-large.svg')}}" width="20" height="20" alt="user icon"></div>--}}
-{{--                    </a></li>--}}
-{{--            </ul>--}}
         </nav>
     </header>
     <main id="main">
@@ -437,7 +380,7 @@
             <div class="flex flex-col items-center space-y-8 py-6 xl:flex-row xl:justify-between xl:space-y-0">
                 <div class="flex grow flex-col items-center gap-4 space-y-4 lg:flex-row lg:gap-6 lg:space-y-0">
                     <figure class="shrink-0"><img
-                            src="https://images.ctfassets.net/vy53kjqs34an/3zOlXwzG8mnkgOFKwogIjR/12f91cfef6a36c3e280b19e755b4dc43/logo-new.svg"
+                            src="{{asset('images/app/logo-new.svg')}}"
                             width="150" height="46" alt="webook.com"></figure>
                     <ul class="flex shrink-0 items-center">
                         <li class="rounded-md"><a
@@ -458,21 +401,7 @@
                                 data-location="footer" href="https://www.instagram.com/webookfun" target="_blank">
                                 <img src="https://images.ctfassets.net/vy53kjqs34an/6vlq9w8miTqnUyvaPVTGlt/c7098a6a02a829656ad0150412caa439/Button-2.png?fit=pad&amp;w=55&amp;h=55"
                                      width="55" height="55" alt=""></a></li>
-                        <li class="rounded-md"><a
-                                class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed social_media_follow overflow-hidden rounded-md !p-1"
-                                rel="noreferrer noopener" aria-label="https://www.linkedin.com/company/webookcom/"
-                                data-location="footer" href="https://www.linkedin.com/company/webookcom/"
-                                target="_blank"> <img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/6n6QzSnYYtkpeEze0BopUH/0798b4cb06244541752bfcc91d87b375/linkedin.png?fit=pad&amp;w=55&amp;h=55"
-                                    width="55" height="55" alt=""></a></li>
-                        <li class="rounded-md"><a
-                                class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed social_media_follow overflow-hidden rounded-md !p-1"
-                                rel="noreferrer noopener"
-                                aria-label="https://www.youtube.com/channel/UCicg1LL4uwg1FPq-m9kZwVg"
-                                data-location="footer"
-                                href="https://www.youtube.com/channel/UCicg1LL4uwg1FPq-m9kZwVg" target="_blank">
-                                <img src="https://images.ctfassets.net/vy53kjqs34an/1BahN7ZNIsnzgSsgsNmKG6/8e6b02bd0f4d4f26778a14a043386f37/youtube-1.png?fit=pad&amp;w=55&amp;h=55"
-                                     width="55" height="55" alt=""></a></li>
+
                     </ul>
                 </div>
                 <div class="flex w-full flex-col items-center justify-center gap-2 lg:flex-row xl:justify-end">
@@ -499,12 +428,7 @@
             <div class="flex flex-col items-center justify-between border-t border-gray-500/50 pt-5 xl:flex-row">
                 <nav class="flex flex-wrap justify-center py-2 pb-8 text-xs md:p-4">
                     <ul class="flex flex-row flex-wrap items-center justify-center gap-2 space-y-0" role="menu">
-                        <li role="presentation"><button
-                                class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center overflow-hidden px-4 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md gap-1 py-1 uppercase underline-offset-2 hover:underline"
-                                data-testid="lang-switcher" data-location="header" data-target-language="en"
-                                role="menuitem"> <span
-                                    class="ltr:font-vazirmatn rtl:font-inter hidden md:block">English</span><span
-                                    class="ltr:font-vazirmatn rtl:font-inter md:hidden">English</span></button></li>
+
                         <li role="presentation"><a
                                 class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md px-2.5 py-1"
                                 rel="noreferrer noopener" aria-label="فرص وظيفية" role="menuitem"
