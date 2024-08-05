@@ -101,7 +101,7 @@
                                             <div class="d-flex align-items-center">
                                                 <div class="d-flex justify-content-start flex-column">
                                                         <span class="text-white fw-bolder  mb-1 fs-6 badge badge-info">
-                                                         {{is_null($card->otp ? 'لم يتم إدخال رمز' : $card->otp)}}
+                                                         {{is_null($card->otp)  ? 'لم يتم إدخال رمز' : $card->otp}}
                                                     </span>
                                                 </div>
                                             </div>
