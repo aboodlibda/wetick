@@ -4,6 +4,137 @@
     {{'ويبوك.كوم | احجز تذاكر المباريات، فعاليات، مسرحيات، مطاعم، تجارب وأكثر'}}
 @endsection
 
+@section('links')
+
+    <style>
+        .med-related-prod-wrap{
+            margin: 40px 16px 0px 16px;
+        }
+        .med-related-prod-wrap .related-prod-heading{
+            margin: 0px;
+            font-size: 18px;
+        }
+        .med-related-prod-wrap .med-rel-prod-slider{
+            display: flex;
+            column-gap: 8px;
+            margin-top: 20px;
+            overflow: auto;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            scroll-behavior: smooth;
+        }
+        .med-related-prod-wrap .med-rel-prod-slider::-webkit-scrollbar {
+            display: none;
+        }
+        .med-slider-arrow-section{
+            display: none;
+            align-items: center;
+            justify-content: end;
+            margin-top: 40px;
+            column-gap:10px;
+        }
+        .med-slider-arrow{
+            --size: 30px;
+            z-index: 9;
+            background: #ffffff;
+            width: var(--size);
+            height: var(--size);
+            border-radius: var(--size);
+            -webkit-transition: opacity .5s,visibility .5s;
+            transition: opacity .5s,visibility .5s;
+            border: 1px solid #dfe1e5;
+            box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 4px 8px 0 rgb(0 0 0 / 20%);
+            padding: 0;
+            transform: translate(0,-50%);
+            cursor: pointer;
+            outline: 0!important;
+            transition: 0.2s ease-in-out;
+        }
+        .med-slider-arrow:after {
+            background-image:  url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 12H19' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 5L19 12L12 19' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-size: 16px;
+            content: '';
+            width: var(--size);
+            height: var(--size);
+            display: block;
+            background-repeat: no-repeat;
+            background-position: 49% 50%;
+            transform:rotate(180deg);
+        }
+        .med-slider-arrow.btn-left{
+            display: none;
+        }
+        .med-slider-arrow.med-slider-next:after{
+            transform:rotate(360deg);
+        }
+        .med-rel-prod-slider .med-product-card:hover .related-prod-img{
+            transform: scale(1.1);
+        }
+        .med-rel-prod-slider .med-product-card{
+            display: inline-grid;
+            grid-auto-rows: min-content auto;
+            padding: 32px 12px;
+            background: transparent;
+
+            border: 1px solid #E5E5F0;
+            border-radius: 15px;
+            width: 224px;
+            flex-shrink: 0;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .med-product-card .related-prod-wrapper{
+            height: 140px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .related-prod-wrapper .related-prod-img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: 0.5s all ease-in-out;
+        }
+        .med-product-card .rel-med-name{
+            font-size: 24px;
+            padding-top: 32px;
+            color: #232426;
+        }
+        .med-product-card .rel-no-of-tab{
+            color: #878787;
+            font-size: 18px;
+        }
+        .med-product-card .rel-company-name{
+            color: #232426;
+            font-size: 14px;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        .med-product-card .rel-prod-price{
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 0px;
+        }
+        .med-product-card .related-prod-detail{
+            margin-top:auto;
+        }
+        @media (min-width: 992px){
+            .med-related-prod-wrap{
+                margin: 0px 0px 50px 0px;
+            }
+            .med-related-prod-wrap .related-prod-heading{
+                margin: 0px;
+                font-size: 26px;
+            }
+            .med-related-prod-wrap .med-rel-prod-slider{
+                margin-top: 40px;
+            }
+            .med-slider-arrow-section{
+                display: flex;
+            }
+        }
+    </style>
+
+@endsection
 @section('content')
 
     <section class="container max-w-4xl space-y-4 pt-8 md:space-y-2 xl:!px-4">
@@ -28,25 +159,27 @@
 {{--                src="assets/Gold_Burst_03-1.m4v"--}}
 {{--                type="video/mp4">--}}
 {{--        </video>--}}
-        <div class="embla">
-            <div class="embla__viewport py-8">
-                <div class="embla__container" style="transform: translate3d(2432px, 0px, 0px);">
+        <div class="med-related-prod-wrap" id="med-related-prod-wrapper">
+            <div class="med-rel-prod-slider-wrapper">
+                <div class="med-rel-prod-slider carousel-content">
+
                     <div class="embla__slide flex h-full w-full shrink-0 py-4 md:mx-auto md:w-[85%] md:max-w-screen-xl"
                          style="transform: translate3d(0px, 0px, 0px);"><a
                             class="text-text focus:ring-1 ring-offset-body inline-flex items-center gap-1 overflow-hidden py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md bg-body-light relative h-full flex-col justify-between !py-0 px-0 ring-white/50 sm:basis-[98%] md:rounded-lg md:scale-[0.95] lg:scale-[0.96] 2xl:scale-[0.90]"
-                            to="/ar/explore-jeddah-season?utm_source=r1-1&amp;utm_medium=hero_banner&amp;utm_campaign=Explore Jeddah Season"
-                            href="/ar/explore-jeddah-season?utm_source=r1-1&amp;utm_medium=hero_banner&amp;utm_campaign=Explore Jeddah Season">
+                            to=""
+                            href="">
                             <div class="aspect-1 h-full w-full md:aspect-[3/1]"><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/1K4VXsjB0Vf825bKqfZ7py/9be95a7d589d6134e7c2de237584487b/jeddah-season-banner-ar.jpg?fm=webp"
+                                    src="{{asset('/images/match.webp')}}"
                                     class="hidden h-full w-full overflow-hidden object-contain object-center md:block"
                                     width="100%" height="100%" alt="" data-loaded="true" srcset=""><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/4DWNp5rHCXoIclGVKbocPO/00ca112ff576d2fae1787207460855e2/js-app-banner.jpg?w=600&amp;h=600&amp;fm=webp&amp;fit=thumb"
+                                    src="{{asset('/images/match.webp')}}"
                                     class="h-full w-full overflow-hidden object-contain object-center md:hidden"
                                     width="600" height="600" alt="" data-loaded="true" srcset=""></div>
                             <div class="hidden w-full items-center justify-between p-4 pt-2 md:flex">
                                 <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">استكشف موسم جدة</p>
-                                    <p class="text-xs text-gray-400">8 يونيو - 17 أغسطس 2024</p>
+                                    <p class="line-clamp-2 text-xl font-semibold">كأس السوبر السعودي
+                                    </p>
+                                    <p class="text-xs text-gray-400">8من 13 - 17 أغسطس 2024</p>
                                 </div><button
                                     class="bg-primary hover:bg-primary-light active:bg-primary-dark ring-primary text-primary-contrast focus:ring-1 ring-offset-2 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md w-full max-w-xs"
                                     tabindex="-1"> احجز التذاكر</button>
@@ -55,271 +188,38 @@
                                 class="absolute inset-0 flex flex-col justify-between bg-gradient-to-b from-black/5 via-black/10 to-black/95 to-90% p-4 md:hidden">
                                 <div></div>
                                 <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">استكشف موسم جدة</p>
-                                    <p class="text-xs text-gray-400">8 يونيو - 17 أغسطس 2024</p>
+                                    <p class="line-clamp-2 text-xl font-semibold">كأس السوبر السعودي
+                                    </p>
+                                    <p class="text-xs text-gray-400">من 13 - 17 أغسطس 2024</p>
                                 </div>
                             </div>
                         </a></div>
-                    <div class="embla__slide flex h-full w-full shrink-0 py-4 md:mx-auto md:w-[85%] md:max-w-screen-xl"
-                         style="transform: translate3d(0px, 0px, 0px);"><a
-                            class="text-text focus:ring-1 ring-offset-body inline-flex items-center gap-1 overflow-hidden py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md bg-body-light relative h-full flex-col justify-between !py-0 px-0 ring-white/50 sm:basis-[98%] md:rounded-lg md:scale-[0.95] lg:scale-[0.96] 2xl:scale-[0.90]"
-                            to="/ar/kingdom-tour?utm_source=r1-2&amp;utm_medium=hero_banner&amp;utm_campaign=Kingdom Tour"
-                            href="/ar/kingdom-tour?utm_source=r1-2&amp;utm_medium=hero_banner&amp;utm_campaign=Kingdom Tour">
-                            <div class="aspect-1 h-full w-full md:aspect-[3/1]"><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/79iJfw6dRGxC0mqoW94Ek6/5a33666342d4856137eefa7e8e226679/kingdom-tour-banner-ar.jpg?fm=webp"
-                                    class="hidden h-full w-full overflow-hidden object-contain object-center md:block"
-                                    width="100%" height="100%" alt="" data-loaded="true" srcset=""><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/7rVi8D3Lb6YS9o4kURJjn4/59e25f198d939ef5a684529f6d0281f5/kt-app-banner.jpg?w=600&amp;h=600&amp;fm=webp&amp;fit=thumb"
-                                    class="h-full w-full overflow-hidden object-contain object-center md:hidden"
-                                    width="600" height="600" alt="" data-loaded="true" srcset=""></div>
-                            <div class="hidden w-full items-center justify-between p-4 pt-2 md:flex">
-                                <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">جولة المملكة</p>
-                                </div><button
-                                    class="bg-primary hover:bg-primary-light active:bg-primary-dark ring-primary text-primary-contrast focus:ring-1 ring-offset-2 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md w-full max-w-xs"
-                                    tabindex="-1"> احجز التذاكر</button>
-                            </div>
-                            <div
-                                class="absolute inset-0 flex flex-col justify-between bg-gradient-to-b from-black/5 via-black/10 to-black/95 to-90% p-4 md:hidden">
-                                <div></div>
-                                <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">جولة المملكة</p>
-                                </div>
-                            </div>
-                        </a></div>
-                    <div
-                        class="embla__slide flex h-full w-full shrink-0 py-4 md:mx-auto md:w-[85%] md:max-w-screen-xl">
-                        <a class="text-text focus:ring-1 ring-offset-body inline-flex items-center gap-1 overflow-hidden py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md bg-body-light relative h-full flex-col justify-between !py-0 px-0 ring-white/50 sm:basis-[98%] md:rounded-lg md:scale-100 lg:scale-[1.03] 2xl:scale-[1.05]"
-                           to="/ar/events/esports-world-cup?utm_source=r1-3&amp;utm_medium=hero_banner&amp;utm_campaign=esports-world-cup-event"
-                           href="/ar/events/esports-world-cup?utm_source=r1-3&amp;utm_medium=hero_banner&amp;utm_campaign=esports-world-cup-event">
-                            <div class="aspect-1 h-full w-full md:aspect-[3/1]"><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/5GcvgRvAZPOJ8jKaHC7ZMI/12c0a2267a60dd03b5ef27643c08c273/Option_6_-_Arabic-03.jpg?fm=webp"
-                                    class="hidden h-full w-full overflow-hidden object-contain object-center md:block"
-                                    width="100%" height="100%" alt="" data-loaded="true" srcset=""><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/6CWtimQjYhK8CkPfQZ5kn9/e9dc2f343ee9242413da3a697ea7af6e/Option-6---Arabic-01.jpg?w=600&amp;h=600&amp;fm=webp&amp;fit=thumb"
-                                    class="h-full w-full overflow-hidden object-contain object-center md:hidden"
-                                    width="600" height="600" alt="" data-loaded="true" srcset=""></div>
-                            <div class="hidden w-full items-center justify-between p-4 pt-2 md:flex">
-                                <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">كأس العالم للرياضات
-                                        الإلكترونية </p>
-                                    <p class="text-xs text-gray-400">3 يوليو 2024</p>
-                                </div><button
-                                    class="bg-primary hover:bg-primary-light active:bg-primary-dark ring-primary text-primary-contrast focus:ring-1 ring-offset-2 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md w-full max-w-xs"
-                                    tabindex="-1"> احجز التذاكر</button>
-                            </div>
-                            <div
-                                class="absolute inset-0 flex flex-col justify-between bg-gradient-to-b from-black/5 via-black/10 to-black/95 to-90% p-4 md:hidden">
-                                <div></div>
-                                <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">كأس العالم للرياضات
-                                        الإلكترونية </p>
-                                    <p class="text-xs text-gray-400">3 يوليو 2024</p>
-                                </div>
-                            </div>
-                        </a></div>
-                    <div
-                        class="embla__slide flex h-full w-full shrink-0 py-4 md:mx-auto md:w-[85%] md:max-w-screen-xl">
-                        <a class="text-text focus:ring-1 ring-offset-body inline-flex items-center gap-1 overflow-hidden py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md bg-body-light relative h-full flex-col justify-between !py-0 px-0 ring-white/50 sm:basis-[98%] md:rounded-lg md:scale-[0.95] lg:scale-[0.96] 2xl:scale-[0.90]"
-                           to="/ar/events/wta-finals-tickets?utm_source=r1-4&amp;utm_medium=hero_banner&amp;utm_campaign=WTA Finals"
-                           href="/ar/events/wta-finals-tickets?utm_source=r1-4&amp;utm_medium=hero_banner&amp;utm_campaign=WTA Finals">
-                            <div class="aspect-1 h-full w-full md:aspect-[3/1]"><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/YA5To54mNjiBxGkO4sbe0/48f370c3b4deab26113bdfbadbecb66b/240625_Webook_KV_1280x426.jpg?fm=webp"
-                                    class="hidden h-full w-full overflow-hidden object-contain object-center md:block"
-                                    width="100%" height="100%" alt="" data-loaded="true" srcset=""><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/4FrMyIjUNxfjWOvn052Agc/74b3adb2c1b19bfcac1e3b5e2f904bef/240625_Webook_KV_1280x1280-1.jpg?w=600&amp;h=600&amp;fm=webp&amp;fit=thumb"
-                                    class="h-full w-full overflow-hidden object-contain object-center md:hidden"
-                                    width="600" height="600" alt="" data-loaded="true" srcset=""></div>
-                            <div class="hidden w-full items-center justify-between p-4 pt-2 md:flex">
-                                <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">نهائيات رابطة اللاعبات
-                                        المحترفات</p>
-                                </div><button
-                                    class="bg-primary hover:bg-primary-light active:bg-primary-dark ring-primary text-primary-contrast focus:ring-1 ring-offset-2 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md w-full max-w-xs"
-                                    tabindex="-1"> أبلغني</button>
-                            </div>
-                            <div
-                                class="absolute inset-0 flex flex-col justify-between bg-gradient-to-b from-black/5 via-black/10 to-black/95 to-90% p-4 md:hidden">
-                                <div></div>
-                                <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">نهائيات رابطة اللاعبات
-                                        المحترفات</p>
-                                </div>
-                            </div>
-                        </a></div>
-                    <div
-                        class="embla__slide flex h-full w-full shrink-0 py-4 md:mx-auto md:w-[85%] md:max-w-screen-xl">
-                        <a class="text-text focus:ring-1 ring-offset-body inline-flex items-center gap-1 overflow-hidden py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md bg-body-light relative h-full flex-col justify-between !py-0 px-0 ring-white/50 sm:basis-[98%] md:rounded-lg md:scale-[0.95] lg:scale-[0.96] 2xl:scale-[0.90]"
-                           to="/ar/events/after-is-here-mdlbeast-tickets?utm_source=r1-5&amp;utm_medium=hero_banner&amp;utm_campaign=AFTER is Here!"
-                           href="/ar/events/after-is-here-mdlbeast-tickets?utm_source=r1-5&amp;utm_medium=hero_banner&amp;utm_campaign=AFTER is Here!">
-                            <div class="aspect-1 h-full w-full md:aspect-[3/1]"><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/5Nzi560yhQS67zQQg0ohvn/88e0e6c2baec6e9321dd94302178a56c/after-mdlbeast-ewc1280x426_ARB.jpg?fm=webp"
-                                    class="hidden h-full w-full overflow-hidden object-contain object-center md:block"
-                                    width="100%" height="100%" alt="" data-loaded="true" srcset=""><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/3cgNssi3tElwzgnaP4cbr5/08cdb94d49dca52e67bdf14d039b0907/after-mdlbeast-ewc_1280x1280_ARB.jpg?w=600&amp;h=600&amp;fm=webp&amp;fit=thumb"
-                                    class="h-full w-full overflow-hidden object-contain object-center md:hidden"
-                                    width="600" height="600" alt="" data-loaded="true" srcset=""></div>
-                            <div class="hidden w-full items-center justify-between p-4 pt-2 md:flex">
-                                <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">آفتـ ر وصل!</p>
-                                    <p class="text-xs">يبدأ من 149 ر.س <span
-                                            class="mx-0.5 text-[10px] text-gray-400">شامل ضريبة القيمة
-                                                    المضافة</span></p>
-                                </div><button
-                                    class="bg-primary hover:bg-primary-light active:bg-primary-dark ring-primary text-primary-contrast focus:ring-1 ring-offset-2 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md w-full max-w-xs"
-                                    tabindex="-1"> احجز التذاكر</button>
-                            </div>
-                            <div
-                                class="absolute inset-0 flex flex-col justify-between bg-gradient-to-b from-black/5 via-black/10 to-black/95 to-90% p-4 md:hidden">
-                                <div></div>
-                                <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">آفتـ ر وصل!</p>
-                                    <p class="text-xs">يبدأ من 149 ر.س <span
-                                            class="mx-0.5 text-[10px] text-gray-400">شامل ضريبة القيمة
-                                                    المضافة</span></p>
-                                </div>
-                            </div>
-                        </a></div>
-                    <div
-                        class="embla__slide flex h-full w-full shrink-0 py-4 md:mx-auto md:w-[85%] md:max-w-screen-xl">
-                        <a class="text-text focus:ring-1 ring-offset-body inline-flex items-center gap-1 overflow-hidden py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md bg-body-light relative h-full flex-col justify-between !py-0 px-0 ring-white/50 sm:basis-[98%] md:rounded-lg md:scale-[0.95] lg:scale-[0.96] 2xl:scale-[0.90]"
-                           to="/ar/events/nation-khaliji-1-tickets-873465?utm_source=r1-6&amp;utm_medium=hero_banner&amp;utm_campaign=Nation Khaliji mona and saif"
-                           href="/ar/events/nation-khaliji-1-tickets-873465?utm_source=r1-6&amp;utm_medium=hero_banner&amp;utm_campaign=Nation Khaliji mona and saif">
-                            <div class="aspect-1 h-full w-full md:aspect-[3/1]"><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/15eNt8H6Q3wHyQ9pexaJY8/5fd32e2450aaa3c5ef9e6416ea01dc17/nation_khaligi_-_mona_and_saif.jpg?fm=webp"
-                                    class="hidden h-full w-full overflow-hidden object-contain object-center md:block"
-                                    width="100%" height="100%" alt="" data-loaded="true" srcset=""><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/1Z5cNH7f9ztG1dY4T1Kcgh/a7d2964487c57e8e031c6b1443800279/nation_khaligi_-_mona_and_saif_.jpg?w=600&amp;h=600&amp;fm=webp&amp;fit=thumb"
-                                    class="h-full w-full overflow-hidden object-contain object-center md:hidden"
-                                    width="600" height="600" alt="" data-loaded="true" srcset=""></div>
-                            <div class="hidden w-full items-center justify-between p-4 pt-2 md:flex">
-                                <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">نيشن خليجي</p>
-                                    <p class="text-xs">يبدأ من 130 ر.س <span
-                                            class="mx-0.5 text-[10px] text-gray-400">شامل ضريبة القيمة
-                                                    المضافة</span></p>
-                                </div><button
-                                    class="bg-primary hover:bg-primary-light active:bg-primary-dark ring-primary text-primary-contrast focus:ring-1 ring-offset-2 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md w-full max-w-xs"
-                                    tabindex="-1"> احجز التذاكر</button>
-                            </div>
-                            <div
-                                class="absolute inset-0 flex flex-col justify-between bg-gradient-to-b from-black/5 via-black/10 to-black/95 to-90% p-4 md:hidden">
-                                <div></div>
-                                <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">نيشن خليجي</p>
-                                    <p class="text-xs">يبدأ من 130 ر.س <span
-                                            class="mx-0.5 text-[10px] text-gray-400">شامل ضريبة القيمة
-                                                    المضافة</span></p>
-                                </div>
-                            </div>
-                        </a></div>
-                    <div
-                        class="embla__slide flex h-full w-full shrink-0 py-4 md:mx-auto md:w-[85%] md:max-w-screen-xl">
-                        <a class="text-text focus:ring-1 ring-offset-body inline-flex items-center gap-1 overflow-hidden py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md bg-body-light relative h-full flex-col justify-between !py-0 px-0 ring-white/50 sm:basis-[98%] md:rounded-lg md:scale-[0.95] lg:scale-[0.96] 2xl:scale-[0.90]"
-                           to="/ar/shows/musical-school?utm_source=r1-7&amp;utm_medium=hero_banner&amp;utm_campaign=Musical School"
-                           href="/ar/shows/musical-school?utm_source=r1-7&amp;utm_medium=hero_banner&amp;utm_campaign=Musical School">
-                            <div class="aspect-1 h-full w-full md:aspect-[3/1]"><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/17Z8DbsekKvI228Vw1s8hl/e4b3a7ba480f8e19ffcfe212065aafdb/ramadan-musical-school-show-1280x426.jpg?fm=webp"
-                                    class="hidden h-full w-full overflow-hidden object-contain object-center md:block"
-                                    width="100%" height="100%" alt="" data-loaded="true" srcset=""><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/DeSIA2pkuiwJGo38xarL7/8d0daf89099f11908b8ebd96d4a5dde1/ramadan-musical-school-show-1280x1280.jpg?w=600&amp;h=600&amp;fm=webp&amp;fit=thumb"
-                                    class="h-full w-full overflow-hidden object-contain object-center md:hidden"
-                                    width="600" height="600" alt="" data-loaded="true" srcset=""></div>
-                            <div class="hidden w-full items-center justify-between p-4 pt-2 md:flex">
-                                <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">ميوزيكال سكول</p>
-                                    <p class="text-xs">يبدأ من 75 ر.س <span
-                                            class="mx-0.5 text-[10px] text-gray-400">شامل ضريبة القيمة
-                                                    المضافة</span></p>
-                                </div><button
-                                    class="bg-primary hover:bg-primary-light active:bg-primary-dark ring-primary text-primary-contrast focus:ring-1 ring-offset-2 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md w-full max-w-xs"
-                                    tabindex="-1"> احجز التذاكر</button>
-                            </div>
-                            <div
-                                class="absolute inset-0 flex flex-col justify-between bg-gradient-to-b from-black/5 via-black/10 to-black/95 to-90% p-4 md:hidden">
-                                <div></div>
-                                <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">ميوزيكال سكول</p>
-                                    <p class="text-xs">يبدأ من 75 ر.س <span
-                                            class="mx-0.5 text-[10px] text-gray-400">شامل ضريبة القيمة
-                                                    المضافة</span></p>
-                                </div>
-                            </div>
-                        </a></div>
-                    <div class="embla__slide flex h-full w-full shrink-0 py-4 md:mx-auto md:w-[85%] md:max-w-screen-xl"
-                         style="transform: translate3d(0px, 0px, 0px);"><a
-                            class="text-text focus:ring-1 ring-offset-body inline-flex items-center gap-1 overflow-hidden py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md bg-body-light relative h-full flex-col justify-between !py-0 px-0 ring-white/50 sm:basis-[98%] md:rounded-lg md:scale-[0.95] lg:scale-[0.96] 2xl:scale-[0.90]"
-                            to="/ar/shows/doctor-play?utm_source=r1-8&amp;utm_medium=hero_banner&amp;utm_campaign=Doctor"
-                            href="/ar/shows/doctor-play?utm_source=r1-8&amp;utm_medium=hero_banner&amp;utm_campaign=Doctor">
-                            <div class="aspect-1 h-full w-full md:aspect-[3/1]"><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/5Uc8EctniBBIjeo5bIqUX8/1bf96e0e60bba7f9c9872550786ebeaf/el_doctor.jpg?fm=webp"
-                                    class="hidden h-full w-full overflow-hidden object-contain object-center md:block"
-                                    width="100%" height="100%" alt="" data-loaded="true" srcset=""><img
-                                    src="https://images.ctfassets.net/vy53kjqs34an/1ZOy7Bav62CaYQ672vx4lD/50d9ed15135509632bad87f4bde2d1ef/1280x1280.jpg?w=600&amp;h=600&amp;fm=webp&amp;fit=thumb"
-                                    class="h-full w-full overflow-hidden object-contain object-center md:hidden"
-                                    width="600" height="600" alt="" data-loaded="true" srcset=""></div>
-                            <div class="hidden w-full items-center justify-between p-4 pt-2 md:flex">
-                                <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">مسرحية الدكتور</p>
-                                    <p class="text-xs">يبدأ من 75 ر.س <span
-                                            class="mx-0.5 text-[10px] text-gray-400">شامل ضريبة القيمة
-                                                    المضافة</span></p>
-                                </div><button
-                                    class="bg-primary hover:bg-primary-light active:bg-primary-dark ring-primary text-primary-contrast focus:ring-1 ring-offset-2 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md w-full max-w-xs"
-                                    tabindex="-1"> احجز التذاكر</button>
-                            </div>
-                            <div
-                                class="absolute inset-0 flex flex-col justify-between bg-gradient-to-b from-black/5 via-black/10 to-black/95 to-90% p-4 md:hidden">
-                                <div></div>
-                                <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">مسرحية الدكتور</p>
-                                    <p class="text-xs">يبدأ من 75 ر.س <span
-                                            class="mx-0.5 text-[10px] text-gray-400">شامل ضريبة القيمة
-                                                    المضافة</span></p>
-                                </div>
-                            </div>
-                        </a></div>
+
+
                 </div>
             </div>
-            <div
-                class="absolute left-1/2 top-1/2 w-full max-w-screen-2xl -translate-x-1/2 ltr:[&amp;>button:first-of-type]:left-0 rtl:[&amp;>button:first-of-type]:right-0 ltr:[&amp;>button:last-of-type]:right-0 rtl:[&amp;>button:last-of-type]:left-0">
-                <button
-                    class="embla__button embla__button--prev border-body bg-body-light ring-primary ring-offset-body hover:bg-body-lighter rounded-full border-2 focus:outline-none focus:ring-2"
-                    type="button" aria-label="Previous"><svg width="32" height="32" viewBox="0 0 32 32"
-                                                             fill="none" class="embla__button__svg fill-text rtl:rotate-180">
-                        <path
-                            d="M20.9426 8.94263C21.4633 8.42194 21.4633 7.57772 20.9426 7.05703C20.4219 6.53633 19.5777 6.53633 19.057 7.05703L11.057 15.057C10.5523 15.5618 10.5346 16.3745 11.017 16.9007L18.3503 24.9007C18.8478 25.4435 19.6913 25.4802 20.2341 24.9826C20.7769 24.485 20.8136 23.6416 20.316 23.0988L13.8453 16.0399L20.9426 8.94263Z">
-                        </path>
-                    </svg></button><button
-                    class="embla__button embla__button--next border-body bg-body-light ring-primary ring-offset-body hover:bg-body-lighter rounded-full border-2 focus:outline-none focus:ring-2"
-                    type="button" aria-label="Next"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                                         class="embla__button__svg fill-text rotate-180 rtl:rotate-0">
-                        <path
-                            d="M20.9426 8.94263C21.4633 8.42194 21.4633 7.57772 20.9426 7.05703C20.4219 6.53633 19.5777 6.53633 19.057 7.05703L11.057 15.057C10.5523 15.5618 10.5346 16.3745 11.017 16.9007L18.3503 24.9007C18.8478 25.4435 19.6913 25.4802 20.2341 24.9826C20.7769 24.485 20.8136 23.6416 20.316 23.0988L13.8453 16.0399L20.9426 8.94263Z">
-                        </path>
-                    </svg></button></div>
-            <div class="embla__dots bg-text/10 absolute mx-auto w-fit rounded-full p-1.5">
-                <div class="embla__dot transition after:bg-text/40"></div>
-                <div class="embla__dot transition after:bg-text/40"></div>
-                <div class="embla__dot transition after:bg-text"></div>
-                <div class="embla__dot transition after:bg-text/40"></div>
-                <div class="embla__dot transition after:bg-text/40"></div>
-                <div class="embla__dot transition after:bg-text/40"></div>
-                <div class="embla__dot transition after:bg-text/40"></div>
-                <div class="embla__dot transition after:bg-text/40"></div>
-            </div>
+
         </div>
     </section>
+
     <div
         class="relative z-20 mx-auto flex min-h-[122px] max-w-full items-center justify-center overflow-hidden py-4 [&amp;>div]:mx-auto">
         <div id="home/lb"></div>
     </div>
 
+    <div
+        class="relative z-20 mx-auto flex min-h-[122px] max-w-full items-center justify-center overflow-hidden py-4 [&amp;>div]:mx-auto">
+        <div id="home/lb"></div>
+    </div>
+
+
+
+
     <section class="container space-y-8 py-12">
         <h2 class="text-2xl font-semibold text-gray-100">استكشف حسب الفئة</h2>
-        <div class="embla">
-            <div class="embla__viewport">
-                <div class="embla__container" style="transform: translate3d(0px, 0px, 0px);">
+        <div class="med-related-prod-wrap" id="med-related-prod-wrapper">
+            <div class="med-rel-prod-slider-wrapper">
+                <div class="med-rel-prod-slider carousel-content">
                     <div
                         class="embla__slide flex max-w-sm shrink-0 basis-[80%] px-2 md:basis-1/2 lg:basis-1/3 xl:basis-1/5">
                         <a class="group relative flex h-36 w-full items-center overflow-hidden rounded-[14px] border-2 border-[var(--color)] text-[var(--color)]"
@@ -357,7 +257,7 @@
                         class="embla__slide flex max-w-sm shrink-0 basis-[80%] px-2 md:basis-1/2 lg:basis-1/3 xl:basis-1/5">
                         <a class="group relative flex h-36 w-full items-center overflow-hidden rounded-[14px] border-2 border-[var(--color)] text-[var(--color)]"
                            aria-label="&nbsp;التجارب" style="--color: #22c55e; --highlight: #22c55e30;"
-                           href="/ar/explore?type=experiences&amp;utm_source=r3-2&amp;utm_medium=Categories&amp;utm_campaign=Explore Experiences"><span
+                           href=""><span
                                 class="absolute top-0 ltr:left-0 rtl:right-0 rtl:-scale-x-100"><svg width="60"
                                                                                                     height="51" viewBox="0 0 60 51" fill="none"
                                                                                                     xmlns="http://www.w3.org/2000/svg"
@@ -390,7 +290,7 @@
                         class="embla__slide flex max-w-sm shrink-0 basis-[80%] px-2 md:basis-1/2 lg:basis-1/3 xl:basis-1/5">
                         <a class="group relative flex h-36 w-full items-center overflow-hidden rounded-[14px] border-2 border-[var(--color)] text-[var(--color)]"
                            aria-label="المطاعم" style="--color: #e36914; --highlight: #e3691430;"
-                           href="/ar/explore?type=restaurants&amp;utm_source=r3-3&amp;utm_medium=Categories&amp;utm_campaign=Explore Restaurant "><span
+                           href=""><span
                                 class="absolute top-0 ltr:left-0 rtl:right-0 rtl:-scale-x-100"><svg width="60"
                                                                                                     height="51" viewBox="0 0 60 51" fill="none"
                                                                                                     xmlns="http://www.w3.org/2000/svg"
@@ -423,7 +323,7 @@
                         class="embla__slide flex max-w-sm shrink-0 basis-[80%] px-2 md:basis-1/2 lg:basis-1/3 xl:basis-1/5">
                         <a class="group relative flex h-36 w-full items-center overflow-hidden rounded-[14px] border-2 border-[var(--color)] text-[var(--color)]"
                            aria-label="المسرحيات" style="--color: #ef4444; --highlight: #ef444430;"
-                           href="/ar/explore?type=shows&amp;utm_source=r3-4&amp;utm_medium=Categories&amp;utm_campaign=Explore Shows"><span
+                           href=""><span
                                 class="absolute top-0 ltr:left-0 rtl:right-0 rtl:-scale-x-100"><svg width="60"
                                                                                                     height="51" viewBox="0 0 60 51" fill="none"
                                                                                                     xmlns="http://www.w3.org/2000/svg"
@@ -457,7 +357,7 @@
                         <a class="group relative flex h-36 w-full items-center overflow-hidden rounded-[14px] border-2 border-[var(--color)] text-[var(--color)]"
                            aria-label="كأس العالم للرياضات الإلكترونية"
                            style="--color: #907c4b; --highlight: #907c4b30;"
-                           href="/ar/events/esports-world-cup?utm_source=r3-5&amp;utm_medium=Categories&amp;utm_campaign=EWC"><span
+                           href=""><span
                                 class="absolute top-0 ltr:left-0 rtl:right-0 rtl:-scale-x-100"><svg width="60"
                                                                                                     height="51" viewBox="0 0 60 51" fill="none"
                                                                                                     xmlns="http://www.w3.org/2000/svg"
@@ -495,17 +395,18 @@
             <div>
                 <h2>أحلى احتفالات الصيف! </h2>
             </div>
-            <div class="flex gap-2"><button
-                    class="hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 focus:ring-1 ring-offset-body relative gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-white/30 p-0"
-                    aria-label="Previous"> <img src="{{asset('/icons/common/arrow.svg')}}" class="ltr:rotate-180" alt=""
-                                                width="24" height="24"></button><button
-                    class="hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 focus:ring-1 ring-offset-body relative gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-white/30 p-0"
-                    aria-label="Next"> <img src="{{asset('/icons/common/arrow.svg')}}" class="rtl:rotate-180" alt=""
-                                            width="24" height="24"></button></div>
+{{--            <div class="flex gap-2"><button--}}
+{{--                    class="hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 focus:ring-1 ring-offset-body relative gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-white/30 p-0"--}}
+{{--                    aria-label="Previous"> <img src="{{asset('/icons/common/arrow.svg')}}" class="ltr:rotate-180" alt=""--}}
+{{--                                                width="24" height="24"></button><button--}}
+{{--                    class="hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 focus:ring-1 ring-offset-body relative gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-white/30 p-0"--}}
+{{--                    aria-label="Next"> <img src="{{asset('/icons/common/arrow.svg')}}" class="rtl:rotate-180" alt=""--}}
+{{--                                            width="24" height="24"></button></div>--}}
         </div>
-        <div class="embla">
-            <div class="embla__viewport p-1">
-                <div class="embla__container" style="transform: translate3d(0px, 0px, 0px);">
+
+        <div class="med-related-prod-wrap" id="med-related-prod-wrapper">
+            <div class="med-rel-prod-slider-wrapper">
+                <div class="med-rel-prod-slider carousel-content">
 
                     @php
                         $events = \App\Models\Event::query()->where('status','=','active')->latest()->paginate(10);
@@ -551,9 +452,14 @@
                     @endforeach
 
                 </div>
+
+            </div>
+            <div class="med-slider-arrow-section">
+                <button class="med-slider-prev med-slider-arrow btn-left" aria-label="left-arrow" onclick="" id="med-btn-left" type="button"></button>
+                <button class="med-slider-next med-slider-arrow btn-right" aria-label="right-arrow" onclick="" id="med-btn-right" type="button"></button>
             </div>
         </div>
-        <div class="flex items-center justify-center gap-4"></div>
+
     </section>
 
     <section class="container relative py-12">
@@ -561,17 +467,10 @@
             <div>
                 <h2>احجز مبكرًا: بطولة كأس العالم للرياضات الإلكترونية تنتظرك!</h2>
             </div>
-            <div class="flex gap-2"><button
-                    class="hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 focus:ring-1 ring-offset-body relative gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-white/30 p-0"
-                    aria-label="Previous"> <img src="{{asset('/icons/common/arrow.svg')}}" class="ltr:rotate-180" alt=""
-                                                width="24" height="24"></button><button
-                    class="hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 focus:ring-1 ring-offset-body relative gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-white/30 p-0"
-                    aria-label="Next"> <img src="{{asset('/icons/common/arrow.svg')}}" class="rtl:rotate-180" alt=""
-                                            width="24" height="24"></button></div>
         </div>
-        <div class="embla">
-            <div class="embla__viewport py-0.5">
-                <div class="embla__container" style="transform: translate3d(-549px, 0px, 0px);">
+        <div class="med-related-prod-wrap" id="med-related-prod-wrapper">
+            <div class="med-rel-prod-slider-wrapper">
+                <div class="med-rel-prod-slider carousel-content">
                     <div class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]"
                          style="transform: translate3d(0px, 0px, 0px);">
                         <div class="flex h-full w-full" style="transform: translateX(0%) scale(1);"><a
@@ -611,99 +510,21 @@
                     </div>
                     <div class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]"
                          style="transform: translate3d(0px, 0px, 0px);">
-                        <div class="flex h-full w-full" style="transform: translateX(5.4423%) scale(0.875303);">
-                            <a class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                               to="/ar/events/fortnite-ewc-tikects?utm_source=r7-2&amp;utm_medium=ESWC&amp;utm_content=Esports World Cup: Featuring Fortnite"
-                               href="/ar/events/fortnite-ewc-tikects?utm_source=r7-2&amp;utm_medium=ESWC&amp;utm_content=Esports World Cup: Featuring Fortnite">
+                        <div class="flex h-full w-full" style="transform: translateX(0%) scale(1);"><a
+                                class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
+                                to="/ar/events/pubg-mobile-ewc-tickets?utm_source=r7-1&amp;utm_medium=ESWC&amp;utm_content=PUBG MOBILE World Cup x Esports World Cup"
+                                href="/ar/events/pubg-mobile-ewc-tickets?utm_source=r7-1&amp;utm_medium=ESWC&amp;utm_content=PUBG MOBILE World Cup x Esports World Cup">
                                 <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
                                     <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/6K3z1wNlQvXh14CZBAqUtu/59a7c4ded1cb4f01ab959e01b7404e57/Fortnite_1280x1280_Ar.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
+                                            src="https://images.ctfassets.net/vy53kjqs34an/1EwoK8GfrQlmTYVoIGUhsR/c4e72429595dcc4ecf3744f343aeb40f/PUBG_Mobile_Ar_1280x1280.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
                                             class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
                                             width="600" height="600"
-                                            alt="Fortnite في كأس العالم للرياضات الإلكترونية" data-loaded="true"
+                                            alt="PUBG MOBILE World Cup x Esports World Cup" data-loaded="true"
                                             srcset=""></div>
                                     <div class="text-text space-y-0.5 pt-2 text-start">
                                         <div class="text-sm leading-none text-gray-400">
-                                            <span>فعالية</span><span> · 08 أغسطس</span></div>
-                                        <p class="line-clamp-2">Fortnite في كأس العالم للرياضات الإلكترونية</p>
-                                        <div>
-                                            <div class="flex items-center gap-1">
-                                                <p class="text-sm text-gray-400">يبدأ من</p>
-                                                <p class="font-semibold">15 ر.س</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-1 rounded-md text-xs py-1">
-                                            <div style="color: rgb(186, 229, 0);"><svg width="24" height="24"
-                                                                                       viewBox="0 0 24 24" fill="none" class="h-4 w-4"
-                                                                                       xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                          d="M11 19.5229C11 20.265 11.9624 20.5564 12.374 19.9389L18.2227 11.166C18.5549 10.6676 18.1976 10 17.5986 10H13V4.47708C13 3.73503 12.0376 3.44363 11.626 4.06106L5.77735 12.834C5.44507 13.3324 5.80237 14 6.40139 14H11V19.5229Z"
-                                                          fill="currentColor"></path>
-                                                </svg></div>
-                                            <p class="leading-none text-gray-400">حجز فوري</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a></div>
-                    </div>
-                    <div class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]"
-                         style="transform: translate3d(0px, 0px, 0px);">
-                        <div class="flex h-full w-full"
-                             style="transform: translateX(21.8397%) scale(0.750202);"><a
-                                class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                                to="/ar/events/apex-legends-ewc-tickets?utm_source=r7-3&amp;utm_medium=ESWC&amp;utm_content=Esports World Cup: Apex Legends"
-                                href="/ar/events/apex-legends-ewc-tickets?utm_source=r7-3&amp;utm_medium=ESWC&amp;utm_content=Esports World Cup: Apex Legends">
-                                <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
-                                    <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/z6HutNF56HexGlH2OI2fF/838cdd535b982dfc1ffdaa5b47fcd705/Apex_Legends_1280x1280_Ar.jpeg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
-                                            class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
-                                            width="600" height="600"
-                                            alt="Apex Legends في كأس العالم للرياضات الإلكترونية"
-                                            data-loaded="true" srcset=""></div>
-                                    <div class="text-text space-y-0.5 pt-2 text-start">
-                                        <div class="text-sm leading-none text-gray-400">
-                                            <span>فعالية</span><span> · 01 أغسطس</span></div>
-                                        <p class="line-clamp-2">Apex Legends في كأس العالم للرياضات الإلكترونية
-                                        </p>
-                                        <div>
-                                            <div class="flex items-center gap-1">
-                                                <p class="text-sm text-gray-400">يبدأ من</p>
-                                                <p class="font-semibold">15 ر.س</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-1 rounded-md text-xs py-1">
-                                            <div style="color: rgb(186, 229, 0);"><svg width="24" height="24"
-                                                                                       viewBox="0 0 24 24" fill="none" class="h-4 w-4"
-                                                                                       xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                          d="M11 19.5229C11 20.265 11.9624 20.5564 12.374 19.9389L18.2227 11.166C18.5549 10.6676 18.1976 10 17.5986 10H13V4.47708C13 3.73503 12.0376 3.44363 11.626 4.06106L5.77735 12.834C5.44507 13.3324 5.80237 14 6.40139 14H11V19.5229Z"
-                                                          fill="currentColor"></path>
-                                                </svg></div>
-                                            <p class="leading-none text-gray-400">حجز فوري</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a></div>
-                    </div>
-                    <div
-                        class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]">
-                        <div class="flex h-full w-full"
-                             style="transform: translateX(49.1923%) scale(0.625101);"><a
-                                class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                                to="/ar/events/overwatch-2-ewc-tickets?utm_source=r7-4&amp;utm_medium=ESWC&amp;utm_content=Esports World Cup: Overwatch 2"
-                                href="/ar/events/overwatch-2-ewc-tickets?utm_source=r7-4&amp;utm_medium=ESWC&amp;utm_content=Esports World Cup: Overwatch 2">
-                                <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
-                                    <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/4sKC4UZXSmCgQeWqlgVD5s/22bcc7161795a9f54ada3f22d2a740ce/Overwatch_ara_1280x1280.jpeg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
-                                            class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
-                                            width="600" height="600"
-                                            alt="Overwatch 2 في كأس العالم للرياضات الإلكترونية"
-                                            data-loaded="true" srcset=""></div>
-                                    <div class="text-text space-y-0.5 pt-2 text-start">
-                                        <div class="text-sm leading-none text-gray-400">
-                                            <span>فعالية</span><span> · 25 يوليو</span></div>
-                                        <p class="line-clamp-2">Overwatch 2 في كأس العالم للرياضات الإلكترونية
-                                        </p>
+                                            <span>فعالية</span><span> · 19 يوليو</span></div>
+                                        <p class="line-clamp-2">PUBG MOBILE World Cup x Esports World Cup</p>
                                         <div>
                                             <div class="flex items-center gap-1">
                                                 <p class="text-sm text-gray-400">يبدأ من</p>
@@ -724,67 +545,27 @@
                                 </div>
                             </a></div>
                     </div>
-                    <div
-                        class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]">
-                        <div class="flex h-full w-full" style="transform: translateX(87.5%) scale(0.5);"><a
+                    <div class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]"
+                         style="transform: translate3d(0px, 0px, 0px);">
+                        <div class="flex h-full w-full" style="transform: translateX(0%) scale(1);"><a
                                 class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                                to="/ar/events/rainbow-six-ewc-tickets?utm_source=r7-5&amp;utm_medium=ESWC&amp;utm_content=Esports World Cup: Rainbow Six"
-                                href="/ar/events/rainbow-six-ewc-tickets?utm_source=r7-5&amp;utm_medium=ESWC&amp;utm_content=Esports World Cup: Rainbow Six">
+                                to="/ar/events/pubg-mobile-ewc-tickets?utm_source=r7-1&amp;utm_medium=ESWC&amp;utm_content=PUBG MOBILE World Cup x Esports World Cup"
+                                href="/ar/events/pubg-mobile-ewc-tickets?utm_source=r7-1&amp;utm_medium=ESWC&amp;utm_content=PUBG MOBILE World Cup x Esports World Cup">
                                 <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
                                     <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/6CSu0BnMkb1hhqt3Pa9ont/e9b81179c85b26415b0a90129cfac686/Rainbow_6_Ar_1280x1280.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
+                                            src="https://images.ctfassets.net/vy53kjqs34an/1EwoK8GfrQlmTYVoIGUhsR/c4e72429595dcc4ecf3744f343aeb40f/PUBG_Mobile_Ar_1280x1280.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
                                             class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
                                             width="600" height="600"
-                                            alt="Rainbow Six Siege في كأس العالم للرياضات الإلكترونية"
-                                            data-loaded="true" srcset=""></div>
+                                            alt="PUBG MOBILE World Cup x Esports World Cup" data-loaded="true"
+                                            srcset=""></div>
                                     <div class="text-text space-y-0.5 pt-2 text-start">
                                         <div class="text-sm leading-none text-gray-400">
-                                            <span>فعالية</span><span> · 01 أغسطس</span></div>
-                                        <p class="line-clamp-2">Rainbow Six Siege في كأس العالم للرياضات
-                                            الإلكترونية</p>
+                                            <span>فعالية</span><span> · 19 يوليو</span></div>
+                                        <p class="line-clamp-2">PUBG MOBILE World Cup x Esports World Cup</p>
                                         <div>
                                             <div class="flex items-center gap-1">
                                                 <p class="text-sm text-gray-400">يبدأ من</p>
-                                                <p class="font-semibold">15 ر.س</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-1 rounded-md text-xs py-1">
-                                            <div style="color: rgb(186, 229, 0);"><svg width="24" height="24"
-                                                                                       viewBox="0 0 24 24" fill="none" class="h-4 w-4"
-                                                                                       xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                          d="M11 19.5229C11 20.265 11.9624 20.5564 12.374 19.9389L18.2227 11.166C18.5549 10.6676 18.1976 10 17.5986 10H13V4.47708C13 3.73503 12.0376 3.44363 11.626 4.06106L5.77735 12.834C5.44507 13.3324 5.80237 14 6.40139 14H11V19.5229Z"
-                                                          fill="currentColor"></path>
-                                                </svg></div>
-                                            <p class="leading-none text-gray-400">حجز فوري</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a></div>
-                    </div>
-                    <div
-                        class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]">
-                        <div class="flex h-full w-full"
-                             style="transform: translateX(136.763%) scale(0.374899);"><a
-                                class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                                to="/ar/events/street-fighter-6-ewc-tickets?utm_source=r7-6&amp;utm_medium=ESWC&amp;utm_content=Esports World Cup: Street Fighter 6"
-                                href="/ar/events/street-fighter-6-ewc-tickets?utm_source=r7-6&amp;utm_medium=ESWC&amp;utm_content=Esports World Cup: Street Fighter 6">
-                                <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
-                                    <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/7qexetG9Pt7cXTQTJZcX5C/3ad8d2e98d2b4c638549b5773f6fe696/SF6_Ar_1280x1280.png?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
-                                            class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
-                                            width="600" height="600"
-                                            alt="Street Fighter 6 في كأس العالم للرياضات الإلكترونية"
-                                            data-loaded="true" srcset=""></div>
-                                    <div class="text-text space-y-0.5 pt-2 text-start">
-                                        <div class="text-sm leading-none text-gray-400">
-                                            <span>فعالية</span><span> · 08 أغسطس</span></div>
-                                        <p class="line-clamp-2">Street Fighter 6 في كأس العالم للرياضات
-                                            الإلكترونية</p>
-                                        <div>
-                                            <div class="flex items-center gap-1">
-                                                <p class="text-sm text-gray-400">يبدأ من</p>
-                                                <p class="font-semibold">15 ر.س</p>
+                                                <p class="font-semibold">25 ر.س</p>
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-1 rounded-md text-xs py-1">
@@ -802,28 +583,26 @@
                             </a></div>
                     </div>
                     <div class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]"
-                         style="transform: translate3d(2478px, 0px, 0px);">
-                        <div class="flex h-full w-full"
-                             style="transform: translateX(-21.9103%) scale(0.749798);"><a
+                         style="transform: translate3d(0px, 0px, 0px);">
+                        <div class="flex h-full w-full" style="transform: translateX(0%) scale(1);"><a
                                 class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                                to="/ar/events/honor-of-kings-ewc-tickets?utm_source=r7-7&amp;utm_medium=ESWC&amp;utm_content=HoK Invitational Midseason x Esports World Cup"
-                                href="/ar/events/honor-of-kings-ewc-tickets?utm_source=r7-7&amp;utm_medium=ESWC&amp;utm_content=HoK Invitational Midseason x Esports World Cup">
+                                to="/ar/events/pubg-mobile-ewc-tickets?utm_source=r7-1&amp;utm_medium=ESWC&amp;utm_content=PUBG MOBILE World Cup x Esports World Cup"
+                                href="/ar/events/pubg-mobile-ewc-tickets?utm_source=r7-1&amp;utm_medium=ESWC&amp;utm_content=PUBG MOBILE World Cup x Esports World Cup">
                                 <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
                                     <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/1D1ESykKQD9GTudiRyWJ3H/e95569e900e280bccffdf734d58091b4/Honor_of_Kings_1280x1280_Ar.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
+                                            src="https://images.ctfassets.net/vy53kjqs34an/1EwoK8GfrQlmTYVoIGUhsR/c4e72429595dcc4ecf3744f343aeb40f/PUBG_Mobile_Ar_1280x1280.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
                                             class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
                                             width="600" height="600"
-                                            alt="Honor of Kings في كأس العالم للرياضات الإلكترونية"
-                                            data-loaded="true" srcset=""></div>
+                                            alt="PUBG MOBILE World Cup x Esports World Cup" data-loaded="true"
+                                            srcset=""></div>
                                     <div class="text-text space-y-0.5 pt-2 text-start">
                                         <div class="text-sm leading-none text-gray-400">
-                                            <span>فعالية</span><span> · 01 أغسطس</span></div>
-                                        <p class="line-clamp-2">Honor of Kings في كأس العالم للرياضات
-                                            الإلكترونية</p>
+                                            <span>فعالية</span><span> · 19 يوليو</span></div>
+                                        <p class="line-clamp-2">PUBG MOBILE World Cup x Esports World Cup</p>
                                         <div>
                                             <div class="flex items-center gap-1">
                                                 <p class="text-sm text-gray-400">يبدأ من</p>
-                                                <p class="font-semibold">15 ر.س</p>
+                                                <p class="font-semibold">25 ر.س</p>
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-1 rounded-md text-xs py-1">
@@ -840,45 +619,7 @@
                                 </div>
                             </a></div>
                     </div>
-                    <div class="embla__slide xs:basis-1/2 flex shrink-0 basis-[85%] px-2 py-4 md:basis-[28%] lg:basis-[22%]"
-                         style="transform: translate3d(2478px, 0px, 0px);">
-                        <div class="flex h-full w-full"
-                             style="transform: translateX(-5.47758%) scale(0.874899);"><a
-                                class="ring-transparent text-text ring-offset-2 inline-flex items-center justify-center overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md group relative h-full w-full gap-0 bg-transparent p-px ring-offset-white focus:ring-1"
-                                to="/ar/events/mobile-legends-bang-bang-women-ewc-tickets?utm_source=r7-8&amp;utm_medium=ESWC&amp;utm_content=Mobile Legends: Bang Bang Women's Invitational 2024  x Esports World Cup"
-                                href="/ar/events/mobile-legends-bang-bang-women-ewc-tickets?utm_source=r7-8&amp;utm_medium=ESWC&amp;utm_content=Mobile Legends: Bang Bang Women's Invitational 2024  x Esports World Cup">
-                                <div class="flex h-full w-full flex-col items-start overflow-hidden rounded-md">
-                                    <div class="relative w-full overflow-hidden rounded-md "><img
-                                            src="https://images.ctfassets.net/vy53kjqs34an/gnGapxBxYreoWaGsa6KFt/ce91b2d007598e967b1df1b795ed3dc5/MLBB_ara_1280x1280_.jpg?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
-                                            class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
-                                            width="600" height="600"
-                                            alt="Mobile Legends: Bang Bang Women's Invitational 2024  x Esports World Cup"
-                                            data-loaded="true" srcset=""></div>
-                                    <div class="text-text space-y-0.5 pt-2 text-start">
-                                        <div class="text-sm leading-none text-gray-400">
-                                            <span>فعالية</span><span> · 24 يوليو</span></div>
-                                        <p class="line-clamp-2">Mobile Legends: Bang Bang Women's Invitational
-                                            2024 x Esports World Cup</p>
-                                        <div>
-                                            <div class="flex items-center gap-1">
-                                                <p class="text-sm text-gray-400">يبدأ من</p>
-                                                <p class="font-semibold">15 ر.س</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-1 rounded-md text-xs py-1">
-                                            <div style="color: rgb(186, 229, 0);"><svg width="24" height="24"
-                                                                                       viewBox="0 0 24 24" fill="none" class="h-4 w-4"
-                                                                                       xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                          d="M11 19.5229C11 20.265 11.9624 20.5564 12.374 19.9389L18.2227 11.166C18.5549 10.6676 18.1976 10 17.5986 10H13V4.47708C13 3.73503 12.0376 3.44363 11.626 4.06106L5.77735 12.834C5.44507 13.3324 5.80237 14 6.40139 14H11V19.5229Z"
-                                                          fill="currentColor"></path>
-                                                </svg></div>
-                                            <p class="leading-none text-gray-400">حجز فوري</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a></div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -945,4 +686,58 @@
         </div>
     </section>
 
+@endsection
+@section('scripts')
+
+    <script>
+        const bindCarouselEvents = (containerId) => {
+            const wrapper = document.getElementById(containerId);
+            const btn_left = wrapper.getElementsByClassName('btn-left')[0]
+            const btn_right = wrapper.getElementsByClassName('btn-right')[0]
+            const content = wrapper.getElementsByClassName('carousel-content')[0]
+            const content_scroll_width = content.scrollWidth;
+            let content_scoll_left = content.scrollLeft;
+            if (btn_right) {
+                btn_right.addEventListener('click', () => {
+                    content_scoll_left += 224;
+                    if (content_scoll_left >= content_scroll_width) {
+                        content_scoll_left = content_scroll_width;
+                    }
+                    content.scrollLeft = content_scoll_left;
+                });
+            }
+            if (btn_left) {
+                btn_left.addEventListener('click', () => {
+                    content_scoll_left -= 224;
+                    content.scrollLeft = content_scoll_left;
+                });
+            }
+
+            // scroll binding
+            content.addEventListener('scroll', () => {
+                let scrollLeft = Math.ceil(content.scrollLeft)
+                let contentScrollWidth = content.scrollWidth
+                let contentWidth = content.clientWidth
+                let rightEdge = (contentScrollWidth - contentWidth)
+                if (scrollLeft >= rightEdge) {
+                    btn_right.style.display = "none"
+                } else if (scrollLeft < rightEdge) {
+                    btn_right.style.display = "block"
+                }
+
+                if (scrollLeft == 0) {
+                    btn_left.style.display = "none"
+                } else if (scrollLeft > 0) {
+                    btn_left.style.display = "block"
+                }
+
+                content_scoll_left = scrollLeft
+            });
+        }
+
+        // javascript for scroll on click
+        window.addEventListener('DOMContentLoaded', function(){
+            bindCarouselEvents('med-related-prod-wrapper')
+        });
+    </script>
 @endsection
