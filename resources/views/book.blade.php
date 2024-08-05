@@ -8,6 +8,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="script"  href="{{asset('assets/@wbk/ticketing-DrPp9T8X.js')}}">
 <script src=" https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>
+
+    <style>
+        #booking-section-ref{ overflow-y: scroll; }
+    </style>
 @endsection
 @section('content')
 
