@@ -57,7 +57,6 @@ class CategoriesController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'image' => 'required',
         ]);
 
         $data = $request->only([
