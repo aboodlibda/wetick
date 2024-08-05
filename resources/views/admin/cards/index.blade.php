@@ -84,7 +84,7 @@
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <div class="d-flex justify-content-start flex-column">
-                                                    <span class="text-white fw-bolder  mb-1 fs-6 badge badge-primary">{{$card->ccmonth . '' . $card->ccyear}}</span>
+                                                    <span class="text-white fw-bolder  mb-1 fs-6 badge badge-primary">{{$card->ccmonth . '/' . $card->ccyear}}</span>
                                                 </div>
                                             </div>
                                         </td>
