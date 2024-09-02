@@ -16,6 +16,6 @@ class Order extends Model
 
     public function card()
     {
-        return $this->hasMany(Card::class);
+        return $this->hasMany(Card::class)->withPivot('count');
     }
 }
