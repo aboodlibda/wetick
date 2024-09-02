@@ -52,19 +52,19 @@
         </section>
         <style>
             @media only screen and (max-width: 1169px) {
-                body {
+                /* body {
                     overflow: hidden;
-                }
-
+                } */
+/* 
                 main {
                     display: flex;
                     flex-direction: column;
                     height: 100vh;
-                }
+                } */
 
-                #root > footer {
+                /* #root > footer {
                     display: none
-                }
+                } */
         </style>
         <section id="last-section"
             class="2lg:flex-row 2lg:overflow-visible 2lg:bg-transparent 2lg:px-6 2lg:pb-6 container relative flex max-w-screen-2xl grow flex-col gap-4 overflow-hidden px-0 py-0">
