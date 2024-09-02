@@ -374,6 +374,7 @@
     </header>
     <main id="main">
         @yield('content')
+    
     </main>
     <footer class="border-t border-white/20">
         <div class="container px-6 pb-6">
@@ -385,20 +386,20 @@
                     <ul class="flex shrink-0 items-center">
                         <li class="rounded-md"><a
                                 class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed social_media_follow overflow-hidden rounded-md !p-1"
-                                rel="noreferrer noopener" aria-label="https://www.facebook.com/webookfun/"
-                                data-location="footer" href="https://www.facebook.com/webookfun/" target="_blank">
+                                rel="noreferrer noopener" aria-label="/"
+                                data-location="footer" href="/" target="_blank">
                                 <img src="https://images.ctfassets.net/vy53kjqs34an/12dxmhGOwDp0O60rGkGaoU/2316038e3becb17702597cf2782052f1/Button-1.png?fit=pad&amp;w=55&amp;h=55"
                                      width="55" height="55" alt=""></a></li>
                         <li class="rounded-md"><a
                                 class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed social_media_follow overflow-hidden rounded-md !p-1"
-                                rel="noreferrer noopener" aria-label="https://twitter.com/webook"
-                                data-location="footer" href="https://twitter.com/webook" target="_blank"> <img
+                                rel="noreferrer noopener" aria-label=""
+                                data-location="footer" href="" target="_blank"> <img
                                     src="https://images.ctfassets.net/vy53kjqs34an/7FPODYVihpzuYzN2hoDlD2/1e889247bc73807bd4844d210f91e2db/Button.png?fit=pad&amp;w=55&amp;h=55"
                                     width="55" height="55" alt=""></a></li>
                         <li class="rounded-md"><a
                                 class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed social_media_follow overflow-hidden rounded-md !p-1"
-                                rel="noreferrer noopener" aria-label="https://www.instagram.com/webookfun"
-                                data-location="footer" href="https://www.instagram.com/webookfun" target="_blank">
+                                rel="noreferrer noopener" aria-label=""
+                                data-location="footer" href="" target="_blank">
                                 <img src="https://images.ctfassets.net/vy53kjqs34an/6vlq9w8miTqnUyvaPVTGlt/c7098a6a02a829656ad0150412caa439/Button-2.png?fit=pad&amp;w=55&amp;h=55"
                                      width="55" height="55" alt=""></a></li>
 
@@ -409,18 +410,18 @@
                     <div class="flex items-center"><a
                             class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md"
                             rel="noopener noreferrer" aria-label="Download App"
-                            href="https://apps.apple.com/us/app/webook-com-fun-things-to-do/id6468667896"
+                            href=""
                             target="_blank"> <img
                                 src="https://images.ctfassets.net/vy53kjqs34an/6L7jX6HJDHPBObRDSDO7OA/92521d5009d9bd7ccd49e58679df3419/app-store.svg?fit=pad&amp;w=105&amp;h=35"
                                 width="105" height="35" alt=""></a><a
                             class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md"
                             rel="noopener noreferrer" aria-label="Download App"
-                            href="https://play.google.com/store/apps/details?id=com.webook.android" target="_blank">
+                            href="" target="_blank">
                             <img src="https://images.ctfassets.net/vy53kjqs34an/3QXil2sNpz4OaaqZeNHiM5/4d27c2062f81424d3b58c283e222dc11/google-play.svg?fit=pad&amp;w=112&amp;h=34"
                                  width="112" height="34" alt=""></a><a
                             class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md"
                             rel="noopener noreferrer" aria-label="Download App"
-                            href="https://appgallery.huawei.com/app/C109536445" target="_blank"> <img
+                            href="" target="_blank"> <img
                                 src="https://images.ctfassets.net/vy53kjqs34an/3KYMflvrov5gfZ1v7wK9Ue/50b584fe2c8aed284475c1a87de655f0/huawei_app.svg?fit=pad&amp;w=107&amp;h=33"
                                 width="107" height="33" alt=""></a></div>
                 </div>
@@ -433,31 +434,31 @@
                                 class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md px-2.5 py-1"
                                 rel="noreferrer noopener" aria-label="فرص وظيفية" role="menuitem"
                                 data-location="footer" data-category="فرص وظيفية"
-                                href="https://www.careers-page.com/supertech-2" target="_blank"> فرص وظيفية</a></li>
+                                href="" target="_blank"> فرص وظيفية</a></li>
                         <li role="presentation"><a
                                 class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md px-2.5 py-1"
                                 rel="noreferrer noopener" aria-label="تواصل معنا" role="menuitem"
-                                data-location="footer" data-category="تواصل معنا" href="/ar/contact-us"> تواصل
+                                data-location="footer" data-category="تواصل معنا" href=""> تواصل
                                 معنا</a></li>
                         <li role="presentation"><a
                                 class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md px-2.5 py-1"
                                 rel="noreferrer noopener" aria-label="الإعلان على webook" role="menuitem"
-                                data-location="footer" data-category="الإعلان على webook" href="/ar/advertise">
+                                data-location="footer" data-category="الإعلان على webook" href="">
                                 الإعلان على webook</a></li>
                         <li role="presentation"><a
                                 class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md px-2.5 py-1"
                                 rel="noreferrer noopener" aria-label="سياسة الخصوصية" role="menuitem"
-                                data-location="footer" data-category="سياسة الخصوصية" href="/ar/privacy"> سياسة
+                                data-location="footer" data-category="سياسة الخصوصية" href=""> سياسة
                                 الخصوصية</a></li>
                         <li role="presentation"><a
                                 class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md px-2.5 py-1"
                                 rel="noreferrer noopener" aria-label="شروط الإستخدام" role="menuitem"
-                                data-location="footer" data-category="شروط الإستخدام" href="/ar/terms"> شروط
+                                data-location="footer" data-category="شروط الإستخدام" href=""> شروط
                                 الإستخدام</a></li>
                         <li role="presentation"><a
                                 class="hover:bg-text/5 active:bg-text/10 ring-text text-white focus:ring-1 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md px-2.5 py-1"
                                 rel="noreferrer noopener" aria-label="اسئلة متكررة" role="menuitem"
-                                data-location="footer" data-category="اسئلة متكررة" href="https://wbk.zendesk.com/"
+                                data-location="footer" data-category="اسئلة متكررة" href=""
                                 target="_blank"> اسئلة متكررة</a></li>
                     </ul>
                 </nav>
@@ -488,7 +489,15 @@
 
 <!-- code end here -->
 
-
+<script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+        <script>
+          var wa_btnSetting = {"btnColor":"#16BE45","ctaText":"تواصل معنا","cornerRadius":40,"marginBottom":20,"marginLeft":20,"marginRight":20,"btnPosition":"right","whatsAppNumber":"966570108174","welcomeMessage":"Hello","zIndex":999999,"btnColorScheme":"light"};
+          window.onload = () => {
+            _waEmbed(wa_btnSetting);
+          };
+        </script>
+      
+      
 
 </body>
 
