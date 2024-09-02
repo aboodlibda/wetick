@@ -234,6 +234,7 @@
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <div class="d-flex justify-content-start flex-column">
+                                                    <span class="text-white fw-bolder  mb-1 fs-6 badge badge-primary">{{$ticket->event->title}}</span>
                                                 </div>
                                             </div>
                                         </td>
