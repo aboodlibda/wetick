@@ -393,7 +393,7 @@
     <section class="container space-y-8 py-12">
         <div class="flex items-center justify-between space-y-4 md:flex-row md:space-y-0">
             <div>
-                <h2>أحلى احتفالات الصيف! </h2>
+                <h2>موسيقى ماتوقف في جدة </h2>
             </div>
 {{--            <div class="flex gap-2"><button--}}
 {{--                    class="hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 focus:ring-1 ring-offset-body relative gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-white/30 p-0"--}}
