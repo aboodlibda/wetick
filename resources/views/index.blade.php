@@ -169,29 +169,29 @@
                             to=""
                             href="">
                             <div class="aspect-1 h-full w-full md:aspect-[3/1]"><img
-                                    src="{{asset('/images/match.webp')}}"
+                                    src="{{asset('/assets/tamer.jpg')}}"
                                     class="hidden h-full w-full overflow-hidden object-contain object-center md:block"
                                     width="100%" height="100%" alt="" data-loaded="true" srcset=""><img
-                                    src="{{asset('/images/match.webp')}}"
+                                    src="{{asset('/assets/tamer.jpg')}}"
                                     class="h-full w-full overflow-hidden object-contain object-center md:hidden"
                                     width="600" height="600" alt="" data-loaded="true" srcset=""></div>
                             <div class="hidden w-full items-center justify-between p-4 pt-2 md:flex">
                                 <div class="space-y-1 text-start">
-                                    <p class="line-clamp-2 text-xl font-semibold">كأس السوبر السعودي
+                                    <!-- <p class="line-clamp-2 text-xl font-semibold">كأس السوبر السعودي
                                     </p>
                                     <p class="text-xs text-gray-400">8من 13 - 17 أغسطس 2024</p>
                                 </div><button
                                     class="bg-primary hover:bg-primary-light active:bg-primary-dark ring-primary text-primary-contrast focus:ring-1 ring-offset-2 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md w-full max-w-xs"
-                                    tabindex="-1"> احجز التذاكر</button>
+                                    tabindex="-1"> احجز التذاكر</button> -->
                             </div>
                             <div
                                 class="absolute inset-0 flex flex-col justify-between bg-gradient-to-b from-black/5 via-black/10 to-black/95 to-90% p-4 md:hidden">
                                 <div></div>
-                                <div class="space-y-1 text-start">
+                                <!-- <div class="space-y-1 text-start">
                                     <p class="line-clamp-2 text-xl font-semibold">كأس السوبر السعودي
                                     </p>
                                     <p class="text-xs text-gray-400">من 13 - 17 أغسطس 2024</p>
-                                </div>
+                                </div> -->
                             </div>
                         </a></div>
 
