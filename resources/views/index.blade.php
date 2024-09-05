@@ -470,7 +470,7 @@
     <section class="container space-y-8 py-12">
         <div class="flex items-center justify-between space-y-4 md:flex-row md:space-y-0">
             <div>
-                <h2>موسيقى ماتوقف في جدة </h2>
+                <h2>احجز أقوى المباريات 🔥🔥🔥 </h2>
             </div>
 {{--            <div class="flex gap-2"><button--}}
 {{--                    class="hover:bg-text/5 active:bg-text/10 ring-text text-text disabled:border-zinc-600 focus:ring-1 ring-offset-body relative gap-1 overflow-hidden text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-white/30 p-0"--}}
@@ -503,7 +503,7 @@
                                     <div class="relative w-full overflow-hidden rounded-md "><img
                                             src="{{asset('events-images/'.$matche->image)}}?fm=webp&amp;fit=thumb&amp;w=600&amp;h=600"
                                             class="aspect-1 h-full object-cover transition duration-300 group-hover:scale-[1.02] group-focus:scale-[1.02]"
-                                            width="600" height="600" alt="كاظم الساهر" data-loaded="true" srcset="">
+                                            width="600" height="600" alt="" data-loaded="true" srcset="">
                                     </div>
                                     <div class="text-text space-y-0.5 pt-2 text-start">
                                         <div class="text-sm leading-none text-gray-400"><span>فعالية</span><span> ·
