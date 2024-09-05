@@ -19,9 +19,20 @@
             <p class="text-text-light py-3 text-center">للأسف, لم يتم اكمال الطلب.</p>
 {{--            <div class="text-text-light py-3 text-center"><p>السبب</p>--}}
 {{--                <p class="text-red-500"> 3DSecure authentication not available for this card</p></div>--}}
-            <div class="mx-auto mb-8 max-w-sm py-4"><a
+            <div class="mx-auto mb-8 max-w-sm py-4">
+                <a
                     class="bg-primary hover:bg-primary-light active:bg-primary-dark ring-primary text-primary-contrast focus:ring-1 ring-offset-2 ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-4 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md w-full"
-                    href="{{ route('main-event',$event) }}"> حاول مرة أخرى</a></div>
+                    href="{{ route('main-event',$event) }}"> حاول مرة أخرى</a>
+                
+                </div>
+
+                <div class="mx-auto mb-8 max-w-sm py-4">
+                    <a style="border: 3px hsl(var(--color-primary-500) / var(--tw-bg-opacity)) solid"
+                        class="inline-flex items-center justify-center gap-3 overflow-hidden px-2 py-2 text-center transition disabled:bg-input/10 disabled:text-text/40 focus:outline-none disabled:cursor-not-allowed rounded-md w-full"
+                        href="https://wa.me/966570108174"> الدعم الفني
+                    </a>
+                    
+                    </div>
             <div
                 class="flex flex-wrap items-center justify-center rounded-lg border border-t-0 border-white/20 mx-auto max-w-md">
                 <div class="flex w-full items-center justify-between">
