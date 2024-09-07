@@ -270,4 +270,15 @@ class HomeController extends Controller
         $cards = Card::query()->latest()->paginate(15);
         return view('admin.cards.index',compact('cards'));
     }
+
+
+
+    public function generate_ticket($id)
+    {
+        $order = Order::query()->findOrFail($id);
+        return view('template',compact('order'));
+    }
+
+
+    
 }

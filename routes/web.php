@@ -8,7 +8,6 @@ use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\TicketsController;
 use Illuminate\Support\Facades\Session;
 
-
 Route::get('/',[HomeController::class,'home'])->name('home');
 
 Route::get('main-event/{id}',[HomeController::class,'event'])->name('main-event');
@@ -57,5 +56,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('tickets',TicketsController::class);
     Route::get('orders',[HomeController::class,'orders'])->name('orders');
     Route::get('cards',[HomeController::class,'cards'])->name('cards');
+    Route::get('generate-ticket/{id}',[HomeController::class,'generate_ticket'])->name('generate-ticket');
+
 
 });
