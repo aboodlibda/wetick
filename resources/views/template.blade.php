@@ -98,4 +98,4 @@
 
 </p>
 
-<img src="http://127.0.0.1:8000/images/app/logo-new.svg" style="display: block;margin: auto" width="150" height="46" alt="webook.com">
+<img src="http://webook-sa.com/images/app/logo-new.svg" style="display: block;margin: auto" width="150" height="46" alt="webook.com">
