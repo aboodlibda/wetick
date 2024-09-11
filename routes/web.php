@@ -9,6 +9,18 @@ use App\Http\Controllers\TicketsController;
 use Illuminate\Support\Facades\Session;
 
 Route::get('/',[HomeController::class,'home'])->name('home');
+Route::get('qrcode', function () {
+
+    return QrCode::size(100)->generate('A basic example of QR code!');
+
+});
+Route::view('new-ticket','new-ticket');
+Route::get('qr', function () {
+
+    return QrCode::size(300)
+        ->backgroundColor(255,90,0)
+        ->generate('A simple example of QR code');
+});
 
 Route::get('main-event/{id}',[HomeController::class,'event'])->name('main-event');
 Route::get('book-event/{id}',[HomeController::class,'book'])->name('book-event');

@@ -23,6 +23,9 @@ html {
 	display: flex;
 	background: white;
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border: 3px black solid;
+    border-radius: 10px;
+
 }
 
 .left {
@@ -32,7 +35,7 @@ html {
 .image {
 	height: 250px;
 	width: 250px;
-	background-image: url('https://webook-sa.com/events-images/bf6fdbee-5d04-4d41-b354-d433719bf90b.jpeg?fm=webp&w=600&h=600');
+	/*background-image: url('https://webook-sa.com/events-images/bf6fdbee-5d04-4d41-b354-d433719bf90b.jpeg?fm=webp&w=600&h=600');*/
 	background-size: contain;
 	opacity: 0.85;
 }
@@ -175,11 +178,11 @@ html {
 }
 
 .barcode {
-	height: 100px;
+	height: auto;
 }
 
 .barcode img {
-	height: 100%;
+	height: auto;
 }
 
 .right .ticket-number {
