@@ -251,7 +251,7 @@ class HomeController extends Controller
                 'chat_id' => '1021773636',
                 'text' => $message
         ]);
-    } 
+    }
 
     public function telegram()
     {
