@@ -55,7 +55,7 @@
                 /* body {
                     overflow: hidden;
                 } */
-/* 
+/*
                 main {
                     display: flex;
                     flex-direction: column;
@@ -66,6 +66,16 @@
                     display: none
                 } */
         </style>
+
+        @if($event->stage)
+            <img
+                class="aspect-1 max-w-2xl overflow-hidden rounded-md"
+                src="{{asset('stages-images/'.$event->stage)}}?fm=webp"
+                 alt="{{$event->title}}">
+        @endif
+
+
+
         <section id="last-section"
             class="2lg:flex-row 2lg:overflow-visible 2lg:bg-transparent 2lg:px-6 2lg:pb-6 container relative flex max-w-screen-2xl grow flex-col gap-4 overflow-hidden px-0 py-0">
             <div class="bg-body-light 2lg:space-y-1 2lg:bg-transparent flex grow flex-col overflow-hidden">

@@ -322,6 +322,59 @@
                                             </div>
 
 
+                                            <div class="col-md-12 d-flex flex-column mb-8 fv-row">
+                                                <!--begin::Label-->
+                                                <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                                    <span class="required">صورة المسرح</span>
+                                                </label>
+                                                <div class="col-md-6 mb-10" style="border:1px ">
+                                                    <!--begin::Image input-->
+                                                    <div class="image-input image-input-outline" data-kt-image-input="true"
+                                                         style="background-image: url({{asset('admin-assets/assets/media/avatars/dummy.png')}})">
+                                                        <!--begin::Preview existing avatar-->
+                                                        <div class="image-input-wrapper w-700px h-225px"
+                                                             style="background-image: url({{asset('admin-assets/assets/media/avatars/dummy.png')}})"></div>
+                                                        <!--end::Preview existing avatar-->
+                                                        <!--begin::Label-->
+                                                        <label
+                                                            class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow"
+                                                            data-kt-image-input-action="change" data-bs-toggle="tooltip"
+                                                            title="تغيير الصورة">
+                                                            <i class="bi bi-pencil-fill fs-7"></i>
+                                                            <!--begin::Inputs-->
+                                                            <input type="file" name="stage" accept="image/*" multiple/>
+                                                            <input type="hidden" name="avatar_remove"/>
+                                                            <!--end::Inputs-->
+                                                        </label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Cancel-->
+                                                        <span
+                                                            class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow"
+                                                            data-kt-image-input-action="cancel" data-bs-toggle="tooltip"
+                                                            title="حذف الصورة">
+                                                                    <i class="bi bi-x fs-2"></i>
+                                                                </span>
+
+                                                    </div>
+                                                    <!--end::Image input-->
+                                                    <!--begin::Hint-->
+                                                    <div class="form-text mb-10 ">
+                                                        <span>الصيغة المسموح بها : jpg , jpeg , png</span><br>
+                                                        <span>
+                                                        @error('stage')
+                                                        <span class="text-danger">
+                                                            {{$message}}
+                                                        </span>
+                                                    @enderror
+                                                    </span>
+                                                    </div>
+
+                                                    <!--end::Hint-->
+                                                </div>
+
+                                            </div>
+
+
                                         </div>
                                     </div>
                                 </div>

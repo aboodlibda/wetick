@@ -42,6 +42,13 @@ class EventsController extends Controller
             $request->image->move(public_path('events-images/'), $imageName);
             $data['image'] = $imageName;
         }
+
+        if ($request->hasFile('stage')) {
+            $stage = $request->file('stage');
+            $stageName = $stage->getClientOriginalName();
+            $request->stage->move(public_path('stages-images/'), $stageName);
+            $data['stage'] = $stageName;
+        }
         $data['status'] = $request->status ? 'active' : 'inactive';
         $event = Event::query()->create($data);
         if ($event){
@@ -87,6 +94,14 @@ class EventsController extends Controller
             $request->image->move(public_path('events-images/'), $imageName);
             $data['image'] = $imageName;
         }
+
+        if ($request->hasFile('stage')) {
+            $stage = $request->file('stage');
+            $stageName = $stage->getClientOriginalName();
+            $request->stage->move(public_path('stages-images/'), $stageName);
+            $data['stage'] = $stageName;
+        }
+
         $data['status'] = $request->status ? 'active' : 'inactive';
         $event = $event->update($data);
         if ($event){
