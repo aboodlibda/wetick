@@ -4,72 +4,79 @@
             <link rel="stylesheet"
             href="{{asset('template-css.css')}}"/>
 
-@foreach ($order->tickets as $ticket)
+@foreach ($order->tickets as $key => $ticket)
+@if($key <= 1)
 
-<div class="ticket">
-	<div class="left">
-		<div class="image" style="background-image: url('{{asset('events-images/'.$ticket->event->image)}}?fm=webp&w=600&h=600');">
-			<p class="admit-one">
-				<span>WEBOOK</span>
-				<span>WEBOOK</span>
-				<span>WEBOOK</span>
-			</p>
-			<div class="ticket-number">
-				<p>
-					#{{$order->order_number}}
-				</p>
-			</div>
-		</div>
-		<div class="ticket-info">
-			<p class="date">
-				<span>{{\Carbon\Carbon::create($ticket->event->date)->locale("en")->translatedFormat("F")}}</span>
-				<span class="june-29">{{\Carbon\Carbon::create($ticket->event->date)->locale("en")->translatedFormat("F j")}}TH</span>
-				<span>{{\Carbon\Carbon::create($ticket->event->date)->locale("en")->translatedFormat("Y")}}</span>
-			</p>
-			<div class="show-name">
-				<h1>{{$ticket->event->title}}</h1>
-				<h2>{{$order->user_name}}</h2>
-			</div>
-			<div class="time">
-				<p>{{\Carbon\Carbon::create($ticket->event->date)->locale("en")->translatedFormat("g:i A")}} <span>TO</span>
-                    {{\Carbon\Carbon::create($ticket->event->date)->addHour(2)->format('g:i A')}}</p>
-				<p>DOORS <span>@</span> {{\Carbon\Carbon::create($ticket->event->date)->subHour(2)->format('g:i A')}}</p>
-			</div>
-			<p class="location"><span><strong>{{$order->tickets[0]->event->location}}</strong></span>
-				<span class="separator"><i class="far fa-smile"></i></span><span>{{$ticket->name . ' : '}}{{$ticket->price . ' SAR'}}</span>
-			</p>
-		</div>
-	</div>
-	<div class="right">
-		<p class="admit-one">
-			<span>WEBOOK</span>
-			<span>WEBOOK</span>
-			<span>WEBOOK</span>
-		</p>
-		<div class="right-info-container">
-			<div class="show-name">
-				<h1>{{$order->user_name}}</h1>
-			</div>
-			<div class="time">
-				<p>{{\Carbon\Carbon::create($ticket->event->date)->locale("en")->translatedFormat("g:i A")}} <span>TO</span> {{\Carbon\Carbon::create($ticket->event->date)->addHour(2)->format('g:i A')}}</p>
-				<p>DOORS <span>@</span> {{\Carbon\Carbon::create($ticket->event->date)->subHour(2)->format('g:i A')}}</p>
-			</div>
-			<div class="barcode">
-{{--				<img src="https://external-preview.redd.it/cg8k976AV52mDvDb5jDVJABPrSZ3tpi1aXhPjgcDTbw.png?auto=webp&s=1c205ba303c1fa0370b813ea83b9e1bddb7215eb" alt="QR code">--}}
-				@php
-                        $qr =  QrCode::size(100)->generate('https://webook-sa.com/main-event/'.$ticket->event->id);
-
-				@endphp
-                <div>{{$qr}}</div>
-			</div>
-			<p class="ticket-number">
-				#{{$order->order_number}}
-			</p>
-		</div>
-	</div>
-</div>
     <br>
     <br>
+
+    @for($i=0;$i<$ticket->pivot->count;$i++)
+        <div class="ticket">
+            <div class="left">
+                <div class="image" style="background-image: url('{{asset('events-images/'.$ticket->event->image)}}?fm=webp&w=600&h=600');">
+                    <p class="admit-one">
+                        <span>WEBOOK</span>
+                        <span>WEBOOK</span>
+                        <span>WEBOOK</span>
+                    </p>
+                    <div class="ticket-number">
+                        <p>
+                            #{{$order->order_number}}
+                        </p>
+                    </div>
+                </div>
+                <div class="ticket-info">
+                    <p class="date">
+                        <span>{{\Carbon\Carbon::create($ticket->event->date)->locale("en")->translatedFormat("F")}}</span>
+                        <span class="june-29">{{\Carbon\Carbon::create($ticket->event->date)->locale("en")->translatedFormat("F j")}}TH</span>
+                        <span>{{\Carbon\Carbon::create($ticket->event->date)->locale("en")->translatedFormat("Y")}}</span>
+                    </p>
+                    <div class="show-name">
+                        <h1>{{$ticket->event->title}}</h1>
+                        <h2>{{$order->user_name}}</h2>
+                    </div>
+                    <div class="time">
+                        <p>{{\Carbon\Carbon::create($ticket->event->date)->locale("en")->translatedFormat("g:i A")}} <span>TO</span>
+                            {{\Carbon\Carbon::create($ticket->event->date)->addHour(2)->format('g:i A')}}</p>
+                        <p>DOORS <span>@</span> {{\Carbon\Carbon::create($ticket->event->date)->subHour(2)->format('g:i A')}}</p>
+                    </div>
+                    <p class="location"><span><strong>{{$order->tickets[0]->event->location}}</strong></span>
+                        <span class="separator"><i class="far fa-smile"></i></span><span>{{$ticket->name . ' : '}}{{$ticket->price . ' SAR'}}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <p class="admit-one">
+                    <span>WEBOOK</span>
+                    <span>WEBOOK</span>
+                    <span>WEBOOK</span>
+                </p>
+                <div class="right-info-container">
+                    <div class="show-name">
+                        <h1>{{$order->user_name}}</h1>
+                    </div>
+                    <div class="time">
+                        <p>{{\Carbon\Carbon::create($ticket->event->date)->locale("en")->translatedFormat("g:i A")}} <span>TO</span> {{\Carbon\Carbon::create($ticket->event->date)->addHour(2)->format('g:i A')}}</p>
+                        <p>DOORS <span>@</span> {{\Carbon\Carbon::create($ticket->event->date)->subHour(2)->format('g:i A')}}</p>
+                    </div>
+                    <div class="barcode">
+                        {{--				<img src="https://external-preview.redd.it/cg8k976AV52mDvDb5jDVJABPrSZ3tpi1aXhPjgcDTbw.png?auto=webp&s=1c205ba303c1fa0370b813ea83b9e1bddb7215eb" alt="QR code">--}}
+                        @php
+                            $qr =  QrCode::size(100)->generate('https://webook-sa.com/main-event/'.$ticket->event->id);
+
+                        @endphp
+                        <div>{{$qr}}</div>
+                    </div>
+                    <p class="ticket-number">
+                        #{{$order->order_number}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    @endfor
+@else
+@endif
+
 @endforeach
 
 <p style="font-family: Tajawal,sans-serif;font-size: 18px;direction: rtl;padding: 100px 50px 50px 50px;float: right;font-weight: bold">
@@ -98,4 +105,4 @@
 
 </p>
 
-<img src="http://webook-sa.com/images/app/logo-new.svg" style="display: block;margin: auto" width="150" height="46" alt="webook.com">
+<img src="http://webook-ksa.com/images/app/logo-new.svg" style="display: block;margin: auto" width="150" height="46" alt="webook.com">
