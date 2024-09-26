@@ -69,8 +69,9 @@
 
         @if($event->stage)
             <img
-                class="aspect-1 max-w-2xl overflow-hidden rounded-md"
+                class=""
                 src="{{asset('stages-images/'.$event->stage)}}?fm=webp"
+                 style="object-fit: cover"
                  alt="{{$event->title}}">
         @endif
 
